@@ -1,0 +1,141 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Components (Buttons, Inputs, Cards)
+=============================================================================
+*/
+
+/* Buttons */
+.sa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: var(--sa-radius);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.sa-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.sa-btn-primary {
+  background-color: var(--sa-color-primary-600);
+  color: var(--sa-color-white);
+}
+.sa-btn-primary:hover {
+  background-color: var(--sa-color-primary-700);
+}
+.sa-btn-secondary {
+  background-color: var(--sa-color-gray-200);
+  color: var(--sa-color-gray-800);
+}
+.sa-btn-secondary:hover {
+  background-color: var(--sa-color-gray-300);
+}
+.sa-btn-danger {
+  background-color: var(--sa-color-danger-600);
+  color: var(--sa-color-white);
+}
+.sa-btn-danger:hover {
+  background-color: var(--sa-color-danger-700);
+}
+
+/* Form Inputs */
+.sa-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--sa-color-gray-900);
+  background-color: var(--sa-color-white);
+  border: 1px solid var(--sa-color-gray-300);
+  border-radius: var(--sa-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sa-input:focus {
+  outline: 0;
+  border-color: var(--sa-color-primary-500);
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+.sa-input:disabled {
+  background-color: var(--sa-color-gray-100);
+  opacity: 1;
+}
+
+/* Cards */
+.sa-card {
+  background-color: var(--sa-color-white);
+  border-radius: var(--sa-radius-md);
+  box-shadow: var(--sa-shadow);
+  overflow: hidden;
+}
+.sa-card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--sa-color-gray-200);
+}
+.sa-card-body {
+  padding: 1.5rem;
+}
+.sa-card-footer {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--sa-color-gray-50);
+  border-top: 1px solid var(--sa-color-gray-200);
+}
+
+/* Badge */
+.sa-badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.sa-badge-primary { background-color: var(--sa-color-primary-100); color: var(--sa-color-primary-800); }
+.sa-badge-success { background-color: var(--sa-color-success-100); color: var(--sa-color-success-800); }
+.sa-badge-danger { background-color: var(--sa-color-danger-100); color: var(--sa-color-danger-800); }
+.sa-badge-warning { background-color: var(--sa-color-warning-100); color: var(--sa-color-warning-800); }
+
+/* Floating WhatsApp Button Component */
+.sa-fab-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: var(--sa-shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+.sa-fab-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Client Logo Component */
+.sa-client-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--sa-color-gray-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sa-client-logo span {
+    font-size: 0.875rem;
+}

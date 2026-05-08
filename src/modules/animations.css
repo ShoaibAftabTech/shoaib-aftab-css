@@ -1,0 +1,46 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Animations
+=============================================================================
+*/
+
+@keyframes sa-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes sa-ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+@keyframes sa-pulse {
+  50% { opacity: .5; }
+}
+@keyframes sa-bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+  50% { transform: none; animation-timing-function: cubic-bezier(0,0,0.2,1); }
+}
+
+.sa-animate-spin { animation: sa-spin 1s linear infinite; }
+.sa-animate-ping { animation: sa-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
+.sa-animate-pulse { animation: sa-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.sa-animate-bounce { animation: sa-bounce 1s infinite; }
+
+/* Client Marquee Infinite Scroll */
+.sa-marquee-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+}
+
+.sa-marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 2rem;
+    animation: sa-scroll 20s linear infinite;
+}
+
+@keyframes sa-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 2rem)); }
+}

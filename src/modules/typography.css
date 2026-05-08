@@ -1,0 +1,62 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Typography
+=============================================================================
+*/
+
+/* Font Family */
+.sa-font-sans { font-family: var(--sa-font-sans); }
+.sa-font-serif { font-family: var(--sa-font-serif); }
+.sa-font-mono { font-family: var(--sa-font-mono); }
+
+/* Font Size */
+.sa-text-xs { font-size: var(--sa-text-xs); line-height: 1rem; }
+.sa-text-sm { font-size: var(--sa-text-sm); line-height: 1.25rem; }
+.sa-text-base { font-size: var(--sa-text-base); line-height: 1.5rem; }
+.sa-text-lg { font-size: var(--sa-text-lg); line-height: 1.75rem; }
+.sa-text-xl { font-size: var(--sa-text-xl); line-height: 1.75rem; }
+.sa-text-2xl { font-size: var(--sa-text-2xl); line-height: 2rem; }
+.sa-text-3xl { font-size: var(--sa-text-3xl); line-height: 2.25rem; }
+.sa-text-4xl { font-size: var(--sa-text-4xl); line-height: 2.5rem; }
+.sa-text-5xl { font-size: var(--sa-text-5xl); line-height: 1; }
+
+/* Font Weight */
+.sa-font-thin { font-weight: 100; }
+.sa-font-extralight { font-weight: 200; }
+.sa-font-light { font-weight: 300; }
+.sa-font-normal { font-weight: 400; }
+.sa-font-medium { font-weight: 500; }
+.sa-font-semibold { font-weight: 600; }
+.sa-font-bold { font-weight: 700; }
+.sa-font-extrabold { font-weight: 800; }
+.sa-font-black { font-weight: 900; }
+
+/* Text Alignment */
+.sa-text-left { text-align: left; }
+.sa-text-center { text-align: center; }
+.sa-text-right { text-align: right; }
+.sa-text-justify { text-align: justify; }
+
+/* Text Decoration */
+.sa-underline { text-decoration: underline; }
+.sa-line-through { text-decoration: line-through; }
+.sa-no-underline { text-decoration: none; }
+
+/* Text Transform */
+.sa-uppercase { text-transform: uppercase; }
+.sa-lowercase { text-transform: lowercase; }
+.sa-capitalize { text-transform: capitalize; }
+.sa-normal-case { text-transform: none; }
+
+/* White Space */
+.sa-whitespace-normal { white-space: normal; }
+.sa-whitespace-nowrap { white-space: nowrap; }
+.sa-whitespace-pre { white-space: pre; }
+.sa-whitespace-pre-line { white-space: pre-line; }
+.sa-whitespace-pre-wrap { white-space: pre-wrap; }
+
+/* Word Break */
+.sa-break-normal { word-break: normal; overflow-wrap: normal; }
+.sa-break-words { overflow-wrap: break-word; }
+.sa-break-all { word-break: break-all; }
+.sa-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

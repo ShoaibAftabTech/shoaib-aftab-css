@@ -1,0 +1,94 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Layout (Flexbox, Grid, Display)
+=============================================================================
+*/
+
+/* Display */
+.sa-hidden { display: none; }
+.sa-block { display: block; }
+.sa-inline-block { display: inline-block; }
+.sa-inline { display: inline; }
+.sa-flex { display: flex; }
+.sa-inline-flex { display: inline-flex; }
+.sa-grid { display: grid; }
+.sa-inline-grid { display: inline-grid; }
+
+/* Flex Direction */
+.sa-flex-row { flex-direction: row; }
+.sa-flex-row-reverse { flex-direction: row-reverse; }
+.sa-flex-col { flex-direction: column; }
+.sa-flex-col-reverse { flex-direction: column-reverse; }
+
+/* Flex Wrap */
+.sa-flex-wrap { flex-wrap: wrap; }
+.sa-flex-wrap-reverse { flex-wrap: wrap-reverse; }
+.sa-flex-nowrap { flex-wrap: nowrap; }
+
+/* Flex Item */
+.sa-flex-1 { flex: 1 1 0%; }
+.sa-flex-auto { flex: 1 1 auto; }
+.sa-flex-initial { flex: 0 1 auto; }
+.sa-flex-none { flex: none; }
+
+/* Justify Content */
+.sa-justify-start { justify-content: flex-start; }
+.sa-justify-end { justify-content: flex-end; }
+.sa-justify-center { justify-content: center; }
+.sa-justify-between { justify-content: space-between; }
+.sa-justify-around { justify-content: space-around; }
+.sa-justify-evenly { justify-content: space-evenly; }
+
+/* Align Items */
+.sa-items-start { align-items: flex-start; }
+.sa-items-end { align-items: flex-end; }
+.sa-items-center { align-items: center; }
+.sa-items-baseline { align-items: baseline; }
+.sa-items-stretch { align-items: stretch; }
+
+/* Align Content */
+.sa-content-center { align-content: center; }
+.sa-content-start { align-content: flex-start; }
+.sa-content-end { align-content: flex-end; }
+.sa-content-between { align-content: space-between; }
+.sa-content-around { align-content: space-around; }
+
+/* Grid Template Columns */
+.sa-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.sa-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sa-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sa-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sa-grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.sa-grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.sa-grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.sa-grid-cols-none { grid-template-columns: none; }
+
+/* Grid Column Spanning */
+.sa-col-auto { grid-column: auto; }
+.sa-col-span-1 { grid-column: span 1 / span 1; }
+.sa-col-span-2 { grid-column: span 2 / span 2; }
+.sa-col-span-3 { grid-column: span 3 / span 3; }
+.sa-col-span-4 { grid-column: span 4 / span 4; }
+.sa-col-span-5 { grid-column: span 5 / span 5; }
+.sa-col-span-6 { grid-column: span 6 / span 6; }
+.sa-col-span-12 { grid-column: span 12 / span 12; }
+.sa-col-span-full { grid-column: 1 / -1; }
+
+/* Gap */
+.sa-gap-0 { gap: var(--sa-spacing-0); }
+.sa-gap-1 { gap: var(--sa-spacing-1); }
+.sa-gap-2 { gap: var(--sa-spacing-2); }
+.sa-gap-3 { gap: var(--sa-spacing-3); }
+.sa-gap-4 { gap: var(--sa-spacing-4); }
+.sa-gap-5 { gap: var(--sa-spacing-5); }
+.sa-gap-6 { gap: var(--sa-spacing-6); }
+.sa-gap-8 { gap: var(--sa-spacing-8); }
+.sa-gap-10 { gap: var(--sa-spacing-10); }
+
+/* Overflow */
+.sa-overflow-auto { overflow: auto; }
+.sa-overflow-hidden { overflow: hidden; }
+.sa-overflow-visible { overflow: visible; }
+.sa-overflow-scroll { overflow: scroll; }
+.sa-overflow-x-auto { overflow-x: auto; }
+.sa-overflow-y-auto { overflow-y: auto; }

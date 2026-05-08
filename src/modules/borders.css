@@ -1,0 +1,49 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Borders & Shadows
+=============================================================================
+*/
+
+/* Border Radius */
+.sa-rounded-none { border-radius: var(--sa-radius-none); }
+.sa-rounded-sm { border-radius: var(--sa-radius-sm); }
+.sa-rounded { border-radius: var(--sa-radius); }
+.sa-rounded-md { border-radius: var(--sa-radius-md); }
+.sa-rounded-lg { border-radius: var(--sa-radius-lg); }
+.sa-rounded-xl { border-radius: var(--sa-radius-xl); }
+.sa-rounded-2xl { border-radius: var(--sa-radius-2xl); }
+.sa-rounded-3xl { border-radius: var(--sa-radius-3xl); }
+.sa-rounded-full { border-radius: var(--sa-radius-full); }
+
+/* Border Width */
+.sa-border-0 { border-width: 0px; }
+.sa-border { border-width: 1px; }
+.sa-border-2 { border-width: 2px; }
+.sa-border-4 { border-width: 4px; }
+.sa-border-8 { border-width: 8px; }
+
+/* Specific Borders */
+.sa-border-t { border-top-width: 1px; }
+.sa-border-b { border-bottom-width: 1px; }
+.sa-border-l { border-left-width: 1px; }
+.sa-border-r { border-right-width: 1px; }
+
+.sa-border-t-0 { border-top-width: 0px; }
+.sa-border-b-0 { border-bottom-width: 0px; }
+.sa-border-l-0 { border-left-width: 0px; }
+.sa-border-r-0 { border-right-width: 0px; }
+
+/* Border Style */
+.sa-border-solid { border-style: solid; }
+.sa-border-dashed { border-style: dashed; }
+.sa-border-dotted { border-style: dotted; }
+.sa-border-double { border-style: double; }
+.sa-border-none { border-style: none; }
+
+/* Shadows */
+.sa-shadow-sm { box-shadow: var(--sa-shadow-sm); }
+.sa-shadow { box-shadow: var(--sa-shadow); }
+.sa-shadow-md { box-shadow: var(--sa-shadow-md); }
+.sa-shadow-lg { box-shadow: var(--sa-shadow-lg); }
+.sa-shadow-xl { box-shadow: var(--sa-shadow-xl); }
+.sa-shadow-none { box-shadow: var(--sa-shadow-none); }
