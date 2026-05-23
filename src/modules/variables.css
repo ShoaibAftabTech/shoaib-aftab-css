@@ -98,6 +98,10 @@
   --sa-text-3xl: 1.875rem;   /* 30px */
   --sa-text-4xl: 2.25rem;    /* 36px */
   --sa-text-5xl: 3rem;       /* 48px */
+  --sa-text-6xl: 3.75rem;    /* 60px */
+  --sa-text-7xl: 4.5rem;     /* 72px */
+  --sa-text-8xl: 6rem;       /* 96px */
+  --sa-text-9xl: 8rem;       /* 128px */
 
   /* Shadows */
   --sa-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -105,7 +109,17 @@
   --sa-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --sa-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --sa-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --sa-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --sa-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   --sa-shadow-none: 0 0 #0000;
+
+  /* Blur */
+  --sa-blur-none: 0px;
+  --sa-blur-sm: 4px;
+  --sa-blur: 8px;
+  --sa-blur-md: 12px;
+  --sa-blur-lg: 16px;
+  --sa-blur-xl: 24px;
 
   /* Border Radius */
   --sa-radius-none: 0px;

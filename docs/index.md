@@ -1,120 +1,128 @@
-# Shoaib Aftab CSS (Framework) - Documentation
+# 📋 shoaib-aftab-css | Documentation
 
-## Introduction
-A lightweight, utility-first CSS Framework with **zero dependencies**. It strictly adheres to the W3C CSS Specification. This documentation provides comprehensive examples to help you build interfaces rapidly.
-
-## Installation
-
-### 1. Using NPM (Recommended for Projects)
-```bash
-npm install @shoaib-aftab/css
-```
-Then import it into your CSS or JS:
-```css
-@import '@shoaib-aftab/css/dist/shoaib-aftab.min.css';
-```
-
-### 2. Using CDN (For Quick Prototyping)
-```html
-<link rel="stylesheet" href="https://unpkg.com/@shoaib-aftab/css/dist/shoaib-aftab.min.css">
-```
+Welcome to the official documentation for **shoaib-aftab-css**—a powerful, lightweight, utility-first, and component-driven CSS framework designed to build scalable UI architectures rapidly.
 
 ---
 
-## Code Examples
+## 🗺️ Documentation Map (Pattern: shoaibaftab.com/shoaib-aftab-css-docs)
 
-### 1. Buttons
-We provide simple, elegant button classes out of the box.
+### 1. Getting Started
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Core Concepts](#core-concepts)
 
+### 2. Layout & Grid
+* [Containers](#containers)
+* [Grid System](#grid)
+* [Flexbox Utilities](#flexbox)
+* [Breakpoints](#breakpoints)
+* [Z-Index](#z-index)
+
+### 3. Components
+* [Buttons & Groups](#buttons)
+* [Cards & Panels](#cards)
+* [Forms & Inputs](#forms)
+* [Modals & Popups](#modals)
+
+### 4. Utilities
+* [Colors & Backgrounds](#colors)
+* [Margin & Padding](#spacing)
+* [Typography](#typography)
+* [Shadows & Borders](#shadows)
+* [Interactive Pseudo-States (New!)](#interactive-states)
+
+---
+
+## 🚀 1. Getting Started
+
+### Introduction
+`shoaib-aftab-css` is a modern CSS framework built strictly on W3C CSS Specifications with absolutely **zero dependencies**. It features a robust layout engine, built-in dark mode support, and native RTL mirroring for Urdu and Arabic web platforms.
+
+### Installation
+Include the minified stylesheet inside the `<head>` of your HTML document:
 ```html
-<!-- Primary Button -->
-<button class="sa-btn sa-btn-primary">Submit Form</button>
+<link href="https://cdn.jsdelivr.net/gh/ShoaibAftabTech/shoaib-aftab-css@main/dist/shoaib-aftab.min.css" rel="stylesheet">
+```
 
-<!-- Outline Button -->
+### Core Concepts
+The framework combines the agility of **Utility CSS** (like Tailwind) with pre-designed **Components** (like Bootstrap) to eliminate custom CSS write-ups:
+* **Utilities:** Fast spacing, alignments, and typography adjustments.
+* **Prefix `sa-`:** Prevents naming collisions with other global stylesheets.
+
+---
+
+## 📐 2. Layout & Grid
+
+### Grid System
+Create modern responsive grid systems up to 12 columns:
+```html
+<div class="sa-grid sa-grid-cols-1 sa-md:grid-cols-2 sa-lg:grid-cols-4 sa-gap-4">
+  <div class="sa-bg-gray-100 sa-p-4">Box 1</div>
+  <div class="sa-bg-gray-100 sa-p-4">Box 2</div>
+  <div class="sa-bg-gray-100 sa-p-4">Box 3</div>
+  <div class="sa-bg-gray-100 sa-p-4">Box 4</div>
+</div>
+```
+
+### Breakpoints
+The framework defines 6 highly responsive screen breakpoints:
+* `sa-sm:` (Mobile Landscape - `640px`)
+* `sa-md:` (Tablets - `768px`)
+* `sa-lg:` (Laptops - `1024px`)
+* `sa-xl:` (Desktops - `1280px`)
+* `sa-2xl:` (Large Desktops - `1536px`)
+* `sa-3xl:` (Ultra-Wide Monitors - `1920px`)
+
+---
+
+## 🎨 3. Components
+
+### Buttons & Groups
+Buttons support hover effects, click scaling transitions, and sizes:
+```html
+<button class="sa-btn sa-btn-primary sa-hover:bg-primary-hover sa-active:scale-95">Submit</button>
 <button class="sa-btn sa-btn-outline">Cancel</button>
-
-<!-- Block Button -->
-<button class="sa-btn sa-btn-success sa-btn-block">Confirm Order</button>
 ```
 
-### 2. Cards
-Cards are essential for grouping content.
-
+### Cards & Panels
 ```html
-<div class="sa-card sa-max-w-lg">
-  <div class="sa-card-header">
-    User Profile
-  </div>
-  <div class="sa-card-body">
-    <p class="sa-text-gray-700">Name: Shoaib Aftab</p>
-    <p class="sa-text-gray-700">Role: Software Engineer</p>
-  </div>
-  <div class="sa-card-footer sa-flex sa-justify-end sa-gap-2">
-    <button class="sa-btn sa-btn-outline">Edit</button>
-    <button class="sa-btn sa-btn-primary">Save</button>
-  </div>
-</div>
-```
-
-### 3. Forms
-Form elements are styled consistently.
-
-```html
-<div class="sa-form-group">
-  <label class="sa-label">Email Address</label>
-  <input type="email" class="sa-input" placeholder="Enter your email">
-</div>
-
-<div class="sa-form-group">
-  <label class="sa-label">Password</label>
-  <input type="password" class="sa-input sa-input-error" placeholder="Enter your password">
-  <p class="sa-text-xs sa-text-danger-500 sa-mt-1">Password is required.</p>
-</div>
-```
-
-### 4. Layout (Grid & Flexbox)
-Easily structure your layouts using Flex and Grid utilities.
-
-```html
-<!-- Grid Example: 3 Columns -->
-<div class="sa-grid sa-grid-cols-3 sa-gap-4">
-  <div class="sa-bg-primary-100 sa-p-4 sa-rounded-md">Item 1</div>
-  <div class="sa-bg-primary-100 sa-p-4 sa-rounded-md">Item 2</div>
-  <div class="sa-bg-primary-100 sa-p-4 sa-rounded-md">Item 3</div>
-</div>
-
-<!-- Flex Example: Centered Content -->
-<div class="sa-flex sa-items-center sa-justify-between sa-p-4 sa-bg-gray-50">
-  <div class="sa-font-bold">Logo</div>
-  <div class="sa-flex sa-gap-2">
-    <a href="#" class="sa-no-underline sa-text-primary-600">Home</a>
-    <a href="#" class="sa-no-underline sa-text-gray-600">About</a>
-  </div>
+<div class="sa-card sa-hover:shadow-lg sa-transition-all">
+  <div class="sa-card-header">Profile Card</div>
+  <div class="sa-card-body">Name: Shoaib Aftab</div>
 </div>
 ```
 
 ---
 
-## RTL Support
-Full support for Urdu, Arabic, and other Right-To-Left languages.
+## 🛠️ 4. Utilities
 
-Add `dir="rtl"` to your HTML tag:
-```html
-<html dir="rtl">
-<body>
-  <!-- Elements like .sa-start-0 will automatically attach to the right side -->
-  <div class="sa-pe-4">This padding is automatically applied to the right side in RTL mode.</div>
-</body>
-</html>
-```
+### Colors & Backgrounds
+* Background colors: `.sa-bg-primary`, `.sa-bg-success`, `.sa-bg-danger`, `.sa-bg-gray-50` to `.sa-bg-gray-900`.
+* Opacity modifiers (New!): Use `\/20` to `\/80` to apply HSL opacity adjustments.
+
+### Margin & Padding
+Spacings (paddings, margins, gaps) range from `0` to `24` (`6rem`) for ultimate visual control:
+* Gaps: `.sa-gap-4`, `.sa-gap-x-2`, `.sa-gap-y-6`.
+* Spacing: `.sa-p-4`, `.sa-m-6`, `.sa-px-12`, `.sa-my-24`.
+
+### Typography
+Text sizes range from `.sa-text-xs` (0.75rem) to `.sa-text-9xl` (8rem) for elegant headings:
+* Weight: `.sa-font-thin` (100) to `.sa-font-black` (900).
+
+### Shadows & Borders
+Premium drop shadows for depth:
+* Shadows: `.sa-shadow-sm`, `.sa-shadow-md`, `.sa-shadow-lg`, `.sa-shadow-xl`, `.sa-shadow-2xl` (New!), `.sa-shadow-inner` (New!).
 
 ---
 
-## API Reference Summary
+## ⚡ 5. Interactive Pseudo-States (New!)
+Equip any HTML element with 30+ responsive pseudo-states for hovering, focus outline, active scaling, and group-hover:
+```html
+<!-- 3D Lift card on hover with active click scale -->
+<div class="sa-card sa-hover:translate-y-neg2 sa-hover:shadow-xl sa-active:scale-95 sa-transition-all">
+  <h3>Interactive Component</h3>
+</div>
 
-- **Colors:** `.sa-bg-primary-50` to `.sa-bg-primary-900`, `.sa-text-danger-500`, etc.
-- **Typography:** `.sa-text-xs` to `.sa-text-3xl`, `.sa-font-bold`, `.sa-text-center`
-- **Spacing:** `.sa-p-1` to `.sa-p-16`, `.sa-m-1` to `.sa-m-16` (also `-t`, `-b`, `-s`, `-e`, `-x`, `-y`)
-- **Layout:** `.sa-flex`, `.sa-grid`, `.sa-hidden`, `.sa-w-full`, `.sa-h-screen`
-- **Components:** `.sa-btn`, `.sa-input`, `.sa-card`, `.sa-alert`, `.sa-badge`, `.sa-table`, `.sa-modal`
-- **Effects:** `.sa-shadow-sm` to `.sa-shadow-xl`, `.sa-rounded-md` to `.sa-rounded-full`, `.sa-opacity-50`
+<!-- Focus outlines for smart inputs -->
+<input class="sa-input sa-focus:ring-2 sa-focus:border-primary sa-transition">
+```

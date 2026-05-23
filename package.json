@@ -1,6 +1,6 @@
 {
   "name": "@shoaibaftabtech/css",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Shoaib Aftab CSS - A modern, lightweight, and self-contained CSS framework with zero dependencies, built on W3C CSS Specification.",
   "main": "dist/shoaib-aftab.min.css",
   "style": "dist/shoaib-aftab.min.css",

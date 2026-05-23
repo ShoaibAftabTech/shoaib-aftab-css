@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://shoaibaftab.com/images/logo.svg" alt="Shoaib Aftab Tech Logo" width="300">
+  <img src="https://shoaibaftab.com/images/logo.png" alt="Shoaib Aftab Tech Logo" width="300">
   <h1>Shoaib Aftab CSS Framework</h1>
   <p><strong>A modern, lightweight, and self-contained CSS framework built for production.</strong></p>
 
@@ -51,18 +51,21 @@ npm install @shoaibaftabtech/css
 ```
 
 ## Features
-- **Zero Dependencies:** Pure W3C CSS. No Tailwind, no Bootstrap, no preprocessors required at runtime.
-- **RTL Support:** Native support for Right-To-Left languages.
-- **Dark Mode:** Native `prefers-color-scheme` support.
-- **Utility First:** Fast and flexible UI building.
+- **Zero Dependencies:** Pure W3C CSS. No preprocessors required at runtime.
+- **RTL Support:** Native support and mirroring for Right-To-Left languages.
+- **Dark Mode:** Native `prefers-color-scheme` and `.dark` class support.
+- **Interactive Pseudo-States (New in v2.0.0!):** 30+ highly-responsive classes for `.sa-hover:`, `.sa-active:`, `.sa-focus:`, `.sa-disabled:`, and `.sa-group-hover:`.
+- **Spacing & Gaps (Expanded in v2.0.0!):** Margins, paddings, and gaps up to `24` (`6rem`) for ultimate visual control.
+- **Typography & Shadows (Enhanced in v2.0.0!):** Font sizes up to `9xl` (8rem) and drop shadows up to `2xl` and `inner`.
 - **Prefix `sa-`:** Prevents conflicts with other libraries.
 
 ## API Reference
-- `sa-bg-{color}-{shade}`: Background colors
-- `sa-text-{color}-{shade}`: Text colors
-- `sa-p-{size}`, `sa-m-{size}`: Padding and Margin
+- `sa-bg-{color}`, `sa-bg-{color}-{shade}`: Background colors
+- `sa-text-{color}`, `sa-text-{color}-{shade}`: Text colors
+- `sa-p-{size}`, `sa-m-{size}`, `sa-gap-{size}`: Padding, Margin, and Gaps (up to `24`)
+- `sa-hover:bg-primary-hover:hover`, `sa-active:scale-95:active`: Interactive states
 - `sa-btn`: Button component
-- ...and many more utility classes (Layout, Flex, Grid, Typography, etc.).
+- ...and many more utility classes (Layout, Flex, Grid, Typography, positioning, etc.).
 
 ## Documentation
 See the `docs/index.md` file for full documentation, complete with detailed examples and instructions.

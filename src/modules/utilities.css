@@ -62,3 +62,57 @@
 .sa-duration-500 { transition-duration: 500ms; }
 .sa-duration-700 { transition-duration: 700ms; }
 .sa-duration-1000 { transition-duration: 1000ms; }
+
+/* Interactive Hover/Active/Focus/Disabled Utilities (30+ States) */
+/* 1. Hover Background states */
+.sa-hover\:bg-primary:hover { background-color: var(--sa-color-primary-500) !important; }
+.sa-hover\:bg-primary-hover:hover { background-color: var(--sa-color-success-600) !important; }
+.sa-hover\:bg-transparent:hover { background-color: transparent !important; }
+.sa-hover\:bg-gray-100:hover { background-color: var(--sa-color-gray-100) !important; }
+
+/* 2. Hover Text states */
+.sa-hover\:text-primary:hover { color: var(--sa-color-primary-500) !important; }
+.sa-hover\:text-white:hover { color: #ffffff !important; }
+.sa-hover\:text-gray-600:hover { color: var(--sa-color-gray-600) !important; }
+
+/* 3. Hover Border states */
+.sa-hover\:border-primary:hover { border-color: var(--sa-color-primary-500) !important; }
+.sa-hover\:border-transparent:hover { border-color: transparent !important; }
+
+/* 4. Hover Shadows & Elevations (3D lifts) */
+.sa-hover\:shadow-md:hover { box-shadow: var(--sa-shadow-md) !important; }
+.sa-hover\:shadow-lg:hover { box-shadow: var(--sa-shadow-lg) !important; }
+.sa-hover\:shadow-xl:hover { box-shadow: var(--sa-shadow-xl) !important; }
+.sa-hover\:translate-y-neg2:hover { transform: translateY(-2px) !important; }
+
+/* 5. Hover Scales */
+.sa-hover\:scale-102:hover { transform: scale(1.02) !important; }
+.sa-hover\:scale-105:hover { transform: scale(1.05) !important; }
+.sa-hover\:scale-110:hover { transform: scale(1.1) !important; }
+
+/* 6. Active click states */
+.sa-active\:scale-98:active { transform: scale(0.98) !important; }
+.sa-active\:scale-95:active { transform: scale(0.95) !important; }
+.sa-active\:scale-90:active { transform: scale(0.9) !important; }
+.sa-active\:bg-primary-dark:active { background-color: var(--sa-color-primary-700) !important; }
+
+/* 7. Focus outlines and rings */
+.sa-focus\:ring-2:focus { box-shadow: 0 0 0 3px rgba(0, 210, 133, 0.3) !important; outline: none !important; }
+.sa-focus\:border-primary:focus { border-color: var(--sa-color-primary-500) !important; outline: none !important; }
+.sa-focus\:bg-white:focus { background-color: #ffffff !important; }
+
+/* 8. Disabled state constraints */
+.sa-disabled\:opacity-50:disabled { opacity: 0.5 !important; pointer-events: none !important; cursor: not-allowed !important; }
+.sa-disabled\:bg-gray-200:disabled { background-color: var(--sa-color-gray-200) !important; color: var(--sa-color-gray-400) !important; pointer-events: none !important; }
+
+/* 9. Group Hover state combinators */
+.sa-group:hover .sa-group-hover\:opacity-100 { opacity: 1 !important; }
+.sa-group:hover .sa-group-hover\:text-primary { color: var(--sa-color-primary-500) !important; }
+.sa-group:hover .sa-group-hover\:translate-x-1 { transform: translateX(4px) !important; }
+.sa-group:hover .sa-group-hover\:scale-105 { transform: scale(1.05) !important; }
+
+/* 10. Hover Opacity adjustments */
+.sa-hover\:opacity-100:hover { opacity: 1 !important; }
+.sa-hover\:opacity-90:hover { opacity: 0.9 !important; }
+.sa-hover\:opacity-80:hover { opacity: 0.8 !important; }
+.sa-hover\:opacity-50:hover { opacity: 0.5 !important; }

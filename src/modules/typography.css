@@ -19,6 +19,10 @@
 .sa-text-3xl { font-size: var(--sa-text-3xl); line-height: 2.25rem; }
 .sa-text-4xl { font-size: var(--sa-text-4xl); line-height: 2.5rem; }
 .sa-text-5xl { font-size: var(--sa-text-5xl); line-height: 1; }
+.sa-text-6xl { font-size: var(--sa-text-6xl); line-height: 1; }
+.sa-text-7xl { font-size: var(--sa-text-7xl); line-height: 1; }
+.sa-text-8xl { font-size: var(--sa-text-8xl); line-height: 1; }
+.sa-text-9xl { font-size: var(--sa-text-9xl); line-height: 1; }
 
 /* Font Weight */
 .sa-font-thin { font-weight: 100; }
