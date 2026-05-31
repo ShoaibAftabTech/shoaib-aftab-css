@@ -1,0 +1,267 @@
+/*
+=============================================================================
+  Shoaib Aftab CSS - Responsive Breakpoint Overrides
+=============================================================================
+*/
+
+/* --- Small Breakpoint (>= 640px) --- */
+@media (min-inline-size: 640px) {
+  /* Display */
+  .sa-sm\:hidden { display: none !important; }
+  .sa-sm\:block { display: block !important; }
+  .sa-sm\:inline-block { display: inline-block !important; }
+  .sa-sm\:flex { display: flex !important; }
+  .sa-sm\:inline-flex { display: inline-flex !important; }
+  .sa-sm\:grid { display: grid !important; }
+
+  /* Flex Direction */
+  .sa-sm\:flex-row { flex-direction: row !important; }
+  .sa-sm\:flex-col { flex-direction: column !important; }
+  .sa-sm\:flex-wrap { flex-wrap: wrap !important; }
+  .sa-sm\:flex-nowrap { flex-wrap: nowrap !important; }
+
+  /* Grid Columns */
+  .sa-sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  .sa-sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .sa-sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .sa-sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .sa-sm\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .sa-sm\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+
+  .sa-sm\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .sa-sm\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .sa-sm\:col-span-3 { grid-column: span 3 / span 3 !important; }
+  .sa-sm\:col-span-4 { grid-column: span 4 / span 4 !important; }
+  .sa-sm\:col-span-6 { grid-column: span 6 / span 6 !important; }
+  .sa-sm\:col-span-12 { grid-column: span 12 / span 12 !important; }
+  .sa-sm\:col-span-full { grid-column: 1 / -1 !important; }
+
+  /* Alignments & Justify */
+  .sa-sm\:justify-start { justify-content: flex-start !important; }
+  .sa-sm\:justify-end { justify-content: flex-end !important; }
+  .sa-sm\:justify-center { justify-content: center !important; }
+  .sa-sm\:justify-between { justify-content: space-between !important; }
+  .sa-sm\:items-start { align-items: flex-start !important; }
+  .sa-sm\:items-end { align-items: flex-end !important; }
+  .sa-sm\:items-center { align-items: center !important; }
+  .sa-sm\:items-stretch { align-items: stretch; }
+
+  /* Spacings (Gap, Padding, Margin) */
+  .sa-sm\:gap-0 { gap: 0 !important; }
+  .sa-sm\:gap-1 { gap: 0.25rem !important; }
+  .sa-sm\:gap-2 { gap: 0.5rem !important; }
+  .sa-sm\:gap-3 { gap: 0.75rem !important; }
+  .sa-sm\:gap-4 { gap: 1rem !important; }
+  .sa-sm\:gap-6 { gap: 1.5rem !important; }
+  .sa-sm\:gap-8 { gap: 2rem !important; }
+
+  .sa-sm\:p-0 { padding: 0 !important; }
+  .sa-sm\:p-2 { padding: 0.5rem !important; }
+  .sa-sm\:p-4 { padding: 1rem !important; }
+  .sa-sm\:p-6 { padding: 1.5rem !important; }
+  .sa-sm\:p-8 { padding: 2rem !important; }
+  
+  .sa-sm\:px-4 { padding-inline-start: 1rem !important; padding-inline-end: 1rem !important; }
+  .sa-sm\:px-6 { padding-inline-start: 1.5rem !important; padding-inline-end: 1.5rem !important; }
+  .sa-sm\:py-4 { padding-block-start: 1rem !important; padding-block-end: 1rem !important; }
+  .sa-sm\:py-6 { padding-block-start: 1.5rem !important; padding-block-end: 1.5rem !important; }
+
+  .sa-sm\:m-0 { margin: 0 !important; }
+  .sa-sm\:m-2 { margin: 0.5rem !important; }
+  .sa-sm\:m-4 { margin: 1rem !important; }
+  .sa-sm\:m-6 { margin: 1.5rem !important; }
+  .sa-sm\:m-8 { margin: 2rem !important; }
+  
+  .sa-sm\:mx-auto { margin-inline-start: auto !important; margin-inline-end: auto !important; }
+
+  /* Sizing */
+  .sa-sm\:w-full { inline-size: 100 !important; }
+  .sa-sm\:w-auto { inline-size: auto !important; }
+  .sa-sm\:h-full { block-size: 100% !important; }
+  .sa-sm\:h-auto { block-size: auto !important; }
+
+  /* Typography */
+  .sa-sm\:text-sm { font-size: 0.875rem !important; }
+  .sa-sm\:text-base { font-size: 1rem !important; }
+  .sa-sm\:text-lg { font-size: 1.125rem !important; }
+  .sa-sm\:text-xl { font-size: 1.25rem !important; }
+  .sa-sm\:text-2xl { font-size: 1.5rem !important; }
+  .sa-sm\:text-3xl { font-size: 1.875rem !important; }
+}
+
+/* --- Medium Breakpoint (>= 768px) --- */
+@media (min-inline-size: 768px) {
+  /* Display */
+  .sa-md\:hidden { display: none !important; }
+  .sa-md\:block { display: block !important; }
+  .sa-md\:inline-block { display: inline-block !important; }
+  .sa-md\:flex { display: flex !important; }
+  .sa-md\:inline-flex { display: inline-flex !important; }
+  .sa-md\:grid { display: grid !important; }
+
+  /* Flex Direction */
+  .sa-md\:flex-row { flex-direction: row !important; }
+  .sa-md\:flex-col { flex-direction: column !important; }
+  .sa-md\:flex-wrap { flex-wrap: wrap !important; }
+  .sa-md\:flex-nowrap { flex-wrap: nowrap !important; }
+
+  /* Grid Columns */
+  .sa-md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  .sa-md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .sa-md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .sa-md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .sa-md\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .sa-md\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+
+  .sa-md\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .sa-md\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .sa-md\:col-span-3 { grid-column: span 3 / span 3 !important; }
+  .sa-md\:col-span-4 { grid-column: span 4 / span 4 !important; }
+  .sa-md\:col-span-6 { grid-column: span 6 / span 6 !important; }
+  .sa-md\:col-span-12 { grid-column: span 12 / span 12 !important; }
+  .sa-md\:col-span-full { grid-column: 1 / -1 !important; }
+
+  /* Alignments & Justify */
+  .sa-md\:justify-start { justify-content: flex-start !important; }
+  .sa-md\:justify-end { justify-content: flex-end !important; }
+  .sa-md\:justify-center { justify-content: center !important; }
+  .sa-md\:justify-between { justify-content: space-between !important; }
+  .sa-md\:items-start { align-items: flex-start !important; }
+  .sa-md\:items-end { align-items: flex-end !important; }
+  .sa-md\:items-center { align-items: center !important; }
+  .sa-md\:items-stretch { align-items: stretch; }
+
+  /* Spacings (Gap, Padding, Margin) */
+  .sa-md\:gap-0 { gap: 0 !important; }
+  .sa-md\:gap-2 { gap: 0.5rem !important; }
+  .sa-md\:gap-4 { gap: 1rem !important; }
+  .sa-md\:gap-6 { gap: 1.5rem !important; }
+  .sa-md\:gap-8 { gap: 2rem !important; }
+
+  .sa-md\:p-0 { padding: 0 !important; }
+  .sa-md\:p-4 { padding: 1rem !important; }
+  .sa-md\:p-6 { padding: 1.5rem !important; }
+  .sa-md\:p-8 { padding: 2rem !important; }
+  
+  .sa-md\:px-4 { padding-inline-start: 1rem !important; padding-inline-end: 1rem !important; }
+  .sa-md\:px-8 { padding-inline-start: 2rem !important; padding-inline-end: 2rem !important; }
+  .sa-md\:py-4 { padding-block-start: 1rem !important; padding-block-end: 1rem !important; }
+  .sa-md\:py-8 { padding-block-start: 2rem !important; padding-block-end: 2rem !important; }
+
+  .sa-md\:m-0 { margin: 0 !important; }
+  .sa-md\:m-4 { margin: 1rem !important; }
+  .sa-md\:m-6 { margin: 1.5rem !important; }
+  .sa-md\:m-8 { margin: 2rem !important; }
+  .sa-md\:mx-auto { margin-inline-start: auto !important; margin-inline-end: auto !important; }
+
+  /* Sizing */
+  .sa-md\:w-full { inline-size: 100% !important; }
+  .sa-md\:w-auto { inline-size: auto !important; }
+  .sa-md\:h-full { block-size: 100% !important; }
+  .sa-md\:h-auto { block-size: auto !important; }
+
+  /* Typography */
+  .sa-md\:text-base { font-size: 1rem !important; }
+  .sa-md\:text-lg { font-size: 1.125rem !important; }
+  .sa-md\:text-xl { font-size: 1.25rem !important; }
+  .sa-md\:text-2xl { font-size: 1.5rem !important; }
+  .sa-md\:text-3xl { font-size: 1.875rem !important; }
+  .sa-md\:text-4xl { font-size: 2.25rem !important; }
+}
+
+/* --- Large Breakpoint (>= 1024px) --- */
+@media (min-inline-size: 1024px) {
+  /* Display */
+  .sa-lg\:hidden { display: none !important; }
+  .sa-lg\:block { display: block !important; }
+  .sa-lg\:inline-block { display: inline-block !important; }
+  .sa-lg\:flex { display: flex !important; }
+  .sa-lg\:inline-flex { display: inline-flex !important; }
+  .sa-lg\:grid { display: grid !important; }
+
+  /* Flex Direction */
+  .sa-lg\:flex-row { flex-direction: row !important; }
+  .sa-lg\:flex-col { flex-direction: column !important; }
+  .sa-lg\:flex-wrap { flex-wrap: wrap !important; }
+  .sa-lg\:flex-nowrap { flex-wrap: nowrap !important; }
+
+  /* Grid Columns */
+  .sa-lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+  .sa-lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .sa-lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .sa-lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .sa-lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .sa-lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+
+  .sa-lg\:col-span-1 { grid-column: span 1 / span 1 !important; }
+  .sa-lg\:col-span-2 { grid-column: span 2 / span 2 !important; }
+  .sa-lg\:col-span-3 { grid-column: span 3 / span 3 !important; }
+  .sa-lg\:col-span-4 { grid-column: span 4 / span 4 !important; }
+  .sa-lg\:col-span-6 { grid-column: span 6 / span 6 !important; }
+  .sa-lg\:col-span-12 { grid-column: span 12 / span 12 !important; }
+  .sa-lg\:col-span-full { grid-column: 1 / -1 !important; }
+
+  /* Alignments & Justify */
+  .sa-lg\:justify-start { justify-content: flex-start !important; }
+  .sa-lg\:justify-end { justify-content: flex-end !important; }
+  .sa-lg\:justify-center { justify-content: center !important; }
+  .sa-lg\:justify-between { justify-content: space-between !important; }
+  .sa-lg\:items-start { align-items: flex-start !important; }
+  .sa-lg\:items-end { align-items: flex-end !important; }
+  .sa-lg\:items-center { align-items: center !important; }
+  .sa-lg\:items-stretch { align-items: stretch; }
+
+  /* Spacings (Gap, Padding, Margin) */
+  .sa-lg\:gap-0 { gap: 0 !important; }
+  .sa-lg\:gap-4 { gap: 1rem !important; }
+  .sa-lg\:gap-6 { gap: 1.5rem !important; }
+  .sa-lg\:gap-8 { gap: 2rem !important; }
+
+  .sa-lg\:p-0 { padding: 0 !important; }
+  .sa-lg\:p-6 { padding: 1.5rem !important; }
+  .sa-lg\:p-8 { padding: 2rem !important; }
+  .sa-lg\:p-12 { padding: 3rem !important; }
+  
+  .sa-lg\:px-6 { padding-inline-start: 1.5rem !important; padding-inline-end: 1.5rem !important; }
+  .sa-lg\:px-12 { padding-inline-start: 3rem !important; padding-inline-end: 3rem !important; }
+  .sa-lg\:py-6 { padding-block-start: 1.5rem !important; padding-block-end: 1.5rem !important; }
+  .sa-lg\:py-12 { padding-block-start: 3rem !important; padding-block-end: 3rem !important; }
+
+  .sa-lg\:mx-auto { margin-inline-start: auto !important; margin-inline-end: auto !important; }
+
+  /* Sizing */
+  .sa-lg\:w-full { inline-size: 100% !important; }
+  .sa-lg\:w-auto { inline-size: auto !important; }
+
+  /* Typography */
+  .sa-lg\:text-lg { font-size: 1.125rem !important; }
+  .sa-lg\:text-xl { font-size: 1.25rem !important; }
+  .sa-lg\:text-2xl { font-size: 1.5rem !important; }
+  .sa-lg\:text-3xl { font-size: 1.875rem !important; }
+  .sa-lg\:text-4xl { font-size: 2.25rem !important; }
+  .sa-lg\:text-5xl { font-size: 3rem !important; }
+  .sa-lg\:text-6xl { font-size: 3.75rem !important; }
+}
+
+/* --- Extra Large Breakpoint (>= 1280px) --- */
+@media (min-inline-size: 1280px) {
+  /* Display */
+  .sa-xl\:hidden { display: none !important; }
+  .sa-xl\:block { display: block !important; }
+  .sa-xl\:flex { display: flex !important; }
+  .sa-xl\:grid { display: grid !important; }
+
+  /* Grid Columns */
+  .sa-xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .sa-xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; }
+  .sa-xl\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+}
+
+/* --- Double Extra Large Breakpoint (>= 1536px) --- */
+@media (min-inline-size: 1536px) {
+  /* Display */
+  .sa-2xl\:hidden { display: none !important; }
+  .sa-2xl\:block { display: block !important; }
+  .sa-2xl\:flex { display: flex !important; }
+  .sa-2xl\:grid { display: grid !important; }
+}

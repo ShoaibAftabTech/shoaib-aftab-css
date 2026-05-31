@@ -92,3 +92,25 @@
 .sa-overflow-scroll { overflow: scroll; }
 .sa-overflow-x-auto { overflow-x: auto; }
 .sa-overflow-y-auto { overflow-y: auto; }
+
+/* CSS Grid Level 2 & 3 (Next-Gen Layouts) */
+.sa-grid-cols-subgrid { grid-template-columns: subgrid; }
+.sa-grid-rows-subgrid { grid-template-rows: subgrid; }
+.sa-grid-rows-masonry { grid-template-rows: masonry; } /* Experimental but standardizing */
+
+/* Aspect Ratio */
+.sa-aspect-auto { aspect-ratio: auto; }
+.sa-aspect-square { aspect-ratio: 1 / 1; }
+.sa-aspect-video { aspect-ratio: 16 / 9; }
+.sa-aspect-wide { aspect-ratio: 21 / 9; }
+
+/* Isolation & Stacking Contexts */
+.sa-isolate { isolation: isolate; }
+.sa-isolation-auto { isolation: auto; }
+
+/* Object Fit */
+.sa-object-contain { object-fit: contain; }
+.sa-object-cover { object-fit: cover; }
+.sa-object-fill { object-fit: fill; }
+.sa-object-none { object-fit: none; }
+.sa-object-scale-down { object-fit: scale-down; }

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Shoaib Aftab CSS Ecosystem</title>
+    <link rel="stylesheet" href="../dist/shoaib-aftab.min.css">
+</head>
+<body class="sa-bg-neutral-50 sa-text-neutral-900 sa-font-primary sa-antialiased">
+
+    <!-- Header -->
+    <header class="sa-bg-white sa-border-b sa-border-neutral-200 sa-sticky sa-top-0 sa-z-50">
+        <div class="sa-container sa-py-4 sa-flex sa-justify-between sa-items-center">
+            <div class="sa-font-heading sa-font-bold sa-text-2xl sa-text-primary-600">Shoaib Aftab CSS</div>
+            <nav class="sa-flex sa-gap-6">
+                <a href="#getting-started" class="sa-font-semibold hover:sa-text-primary-500">Getting Started</a>
+                <a href="#layout" class="sa-font-semibold hover:sa-text-primary-500">Layout</a>
+                <a href="#typography" class="sa-font-semibold hover:sa-text-primary-500">Typography</a>
+                <a href="#colors" class="sa-font-semibold hover:sa-text-primary-500">Colors</a>
+                <a href="../examples/index.html" class="sa-bg-primary-600 sa-text-white sa-px-4 sa-py-2 sa-rounded-md hover:sa-bg-primary-700">View Demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="sa-container sa-py-12 sa-grid sa-grid-cols-1 md:sa-grid-cols-4 sa-gap-8">
+        
+        <!-- Sidebar -->
+        <aside class="md:sa-col-span-1 sa-sticky sa-top-24 sa-self-start">
+            <h3 class="sa-font-bold sa-text-lg sa-mb-4 sa-uppercase sa-tracking-widest sa-text-neutral-500">Core Concepts</h3>
+            <ul class="sa-space-y-3 sa-mb-8">
+                <li><a href="#zero-dependency" class="sa-text-neutral-600 hover:sa-text-primary-600">Zero Dependency</a></li>
+                <li><a href="#gdpr" class="sa-text-neutral-600 hover:sa-text-primary-600">GDPR Compliance</a></li>
+                <li><a href="#responsive" class="sa-text-neutral-600 hover:sa-text-primary-600">Responsive Design</a></li>
+            </ul>
+
+            <h3 class="sa-font-bold sa-text-lg sa-mb-4 sa-uppercase sa-tracking-widest sa-text-neutral-500">Components</h3>
+            <ul class="sa-space-y-3">
+                <li><a href="#grid" class="sa-text-neutral-600 hover:sa-text-primary-600">Grid & Subgrid</a></li>
+                <li><a href="#masonry" class="sa-text-neutral-600 hover:sa-text-primary-600">Masonry</a></li>
+                <li><a href="#container-queries" class="sa-text-neutral-600 hover:sa-text-primary-600">Container Queries</a></li>
+                <li><a href="#animations" class="sa-text-neutral-600 hover:sa-text-primary-600">Scroll Animations</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="md:sa-col-span-3 sa-prose sa-max-w-none">
+            
+            <section id="getting-started" class="sa-mb-16">
+                <h1 class="sa-text-5xl sa-font-bold sa-mb-6">Getting Started</h1>
+                <p class="sa-text-lg sa-text-neutral-600 sa-mb-6">
+                    Welcome to the official documentation for the Shoaib Aftab CSS Framework. This framework is designed for enterprise applications demanding 100% security, zero external dependencies, and modern CSS Level 5 features.
+                </p>
+                <div class="sa-bg-neutral-800 sa-text-white sa-p-6 sa-rounded-xl sa-font-code sa-text-sm">
+                    <code>&lt;link rel="stylesheet" href="path/to/shoaib-aftab.min.css"&gt;</code>
+                </div>
+            </section>
+
+            <section id="zero-dependency" class="sa-mb-16">
+                <h2 class="sa-text-3xl sa-font-bold sa-mb-4">Zero Dependency Philosophy</h2>
+                <p class="sa-text-neutral-600 sa-mb-4">
+                    We strictly forbid the use of external CDNs or Node.js build tools (like PostCSS) for the end-user. The entire framework runs natively in the browser. You don't need Webpack, Vite, or NPM to compile this CSS. It's ready to use out of the box.
+                </p>
+            </section>
+
+            <section id="gdpr" class="sa-mb-16">
+                <h2 class="sa-text-3xl sa-font-bold sa-mb-4">GDPR & Native Font Fallbacks</h2>
+                <p class="sa-text-neutral-600 sa-mb-4">
+                    To comply with the strictest European privacy laws (GDPR), we have removed all third-party font calls (e.g., Google Fonts). The framework defaults to ultra-fast native system fonts. If you apply a class like <code>sa-font-inter</code> but the font isn't loaded, it will flawlessly fall back to your OS's native <code>sans-serif</code> font.
+                </p>
+            </section>
+
+            <section id="grid" class="sa-mb-16">
+                <h2 class="sa-text-3xl sa-font-bold sa-mb-4">Grid & Subgrid</h2>
+                <p class="sa-text-neutral-600 sa-mb-6">
+                    We fully support CSS Grid Level 2, allowing child elements to inherit the grid tracks of their parents using <code>sa-grid-cols-subgrid</code>.
+                </p>
+                <div class="sa-p-8 sa-border sa-border-neutral-200 sa-rounded-xl sa-bg-white">
+                    <div class="sa-grid sa-grid-cols-3 sa-gap-4 sa-bg-neutral-100 sa-p-4 sa-rounded-lg">
+                        <div class="sa-bg-primary-100 sa-p-4 sa-rounded sa-text-center">1</div>
+                        <div class="sa-bg-primary-100 sa-p-4 sa-rounded sa-text-center">2</div>
+                        <div class="sa-bg-primary-100 sa-p-4 sa-rounded sa-text-center">3</div>
+                        <!-- Subgrid -->
+                        <div class="sa-grid sa-grid-cols-subgrid sa-col-span-3 sa-bg-neutral-200 sa-p-2 sa-rounded-lg">
+                            <div class="sa-bg-primary-500 sa-text-white sa-p-4 sa-rounded sa-text-center">Sub 1</div>
+                            <div class="sa-bg-primary-500 sa-text-white sa-p-4 sa-rounded sa-text-center sa-col-span-2">Sub 2 & 3</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="container-queries" class="sa-mb-16">
+                <h2 class="sa-text-3xl sa-font-bold sa-mb-4">Container Queries</h2>
+                <p class="sa-text-neutral-600 sa-mb-6">
+                    Stop relying entirely on viewport media queries. Use <code>sa-container-type-inline-size</code> on a parent, and then use <code>sa-cq-md:...</code> on children to style them based on the parent's width!
+                </p>
+                <div class="sa-bg-neutral-800 sa-text-white sa-p-6 sa-rounded-xl sa-font-code sa-text-sm">
+                    <code>&lt;div class="sa-container-type-inline-size"&gt;<br>
+&nbsp;&nbsp;&lt;div class="sa-cq-md:sa-grid-cols-2"&gt;...&lt;/div&gt;<br>
+&lt;/div&gt;</code>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="sa-bg-neutral-900 sa-text-white sa-py-8 sa-mt-24">
+        <div class="sa-container sa-text-center">
+            <p>&copy; 2024-2026 Shoaib Aftab Tech. Built for the Enterprise.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

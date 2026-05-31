@@ -23,15 +23,15 @@
 .sa-border-8 { border-width: 8px; }
 
 /* Specific Borders */
-.sa-border-t { border-top-width: 1px; }
-.sa-border-b { border-bottom-width: 1px; }
-.sa-border-l { border-left-width: 1px; }
-.sa-border-r { border-right-width: 1px; }
+.sa-border-bes { border-block-start-width: 1px; }
+.sa-border-be { border-block-end-width: 1px; }
+.sa-border-is { border-inline-start-width: 1px; }
+.sa-border-ie { border-inline-end-width: 1px; }
 
-.sa-border-t-0 { border-top-width: 0px; }
-.sa-border-b-0 { border-bottom-width: 0px; }
-.sa-border-l-0 { border-left-width: 0px; }
-.sa-border-r-0 { border-right-width: 0px; }
+.sa-border-bes-0 { border-block-start-width: 0px; }
+.sa-border-be-0 { border-block-end-width: 0px; }
+.sa-border-is-0 { border-inline-start-width: 0px; }
+.sa-border-ie-0 { border-inline-end-width: 0px; }
 
 /* Border Style */
 .sa-border-solid { border-style: solid; }
@@ -46,4 +46,12 @@
 .sa-shadow-md { box-shadow: var(--sa-shadow-md); }
 .sa-shadow-lg { box-shadow: var(--sa-shadow-lg); }
 .sa-shadow-xl { box-shadow: var(--sa-shadow-xl); }
+.sa-shadow-2xl { box-shadow: var(--sa-shadow-2xl); }
+.sa-shadow-inner { box-shadow: var(--sa-shadow-inner); }
 .sa-shadow-none { box-shadow: var(--sa-shadow-none); }
+
+/* Logical Border Radius Corners */
+.sa-rounded-ss { border-start-start-radius: var(--sa-radius); }
+.sa-rounded-se { border-start-end-radius: var(--sa-radius); }
+.sa-rounded-es { border-end-start-radius: var(--sa-radius); }
+.sa-rounded-ee { border-end-end-radius: var(--sa-radius); }

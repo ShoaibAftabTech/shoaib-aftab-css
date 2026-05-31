@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const CleanCSS = require('clean-css');
 
 const srcDir = path.join(__dirname, '../src');
 const distDir = path.join(__dirname, '../dist');
@@ -28,6 +27,7 @@ const cssOrder = [
   'positioning.css',
   'components.css',
   'utilities.css',
+  'responsive.css',
   'animations.css',
   'rtl.css',
   'print.css'
@@ -51,13 +51,24 @@ for (const file of cssOrder) {
   }
 }
 
+// Custom Native CSS Minifier (Zero Dependencies)
+function minifyCSS(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
+    .replace(/[\n\r\t]/g, '') // Remove newlines and tabs
+    .replace(/\s+/g, ' ') // Remove multiple spaces
+    .replace(/\s*([\{\}\:\;\,])\s*/g, '$1') // Remove spaces around delimiters
+    .replace(/\;\}/g, '}') // Remove trailing semicolons in blocks
+    .trim();
+}
+
 // Save non-minified
 fs.writeFileSync(path.join(distDir, 'shoaib-aftab.css'), finalCSS);
 
 // Minify
-const minified = new CleanCSS().minify(finalCSS);
+const minifiedStyles = minifyCSS(finalCSS);
 
 // Save minified
-fs.writeFileSync(path.join(distDir, 'shoaib-aftab.min.css'), `/* Shoaib Aftab CSS Framework v1.0.0 | MIT License | (c) 2024 Shoaib Aftab Tech */\n` + minified.styles);
+fs.writeFileSync(path.join(distDir, 'shoaib-aftab.min.css'), `/* Shoaib Aftab CSS Framework v2.0.0 | MIT License | (c) 2024-2026 Shoaib Aftab Tech */\n` + minifiedStyles);
 
-console.log('Build completed successfully!');
+console.log('Build completed successfully with native minifier!');

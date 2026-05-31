@@ -3,109 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoaib Aftab CSS - Dashboard Example</title>
+  <title>Shoaib Aftab CSS - Enterprise Dashboard</title>
+  <!-- Load our own CSS framework -->
   <link rel="stylesheet" href="../dist/shoaib-aftab.min.css">
+  <!-- Load our own Icons library -->
+  <link rel="stylesheet" href="../../shoaib-aftab-icons/dist/sa-icons.min.css">
+  <!-- Google Fonts for Shoaib Aftab Tech Theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Brand Identity variables mapping */
+      --sa-font-sans: 'Roboto', sans-serif;
+      --sa-font-heading: 'Poppins', sans-serif;
+      
+      --sa-color-primary-50: #eff6ff;
+      --sa-color-primary-100: #dbeafe;
+      --sa-color-primary-500: #4a90e2; /* Soft secondary blue */
+      --sa-color-primary-600: #0a1628; /* Deep primary navy */
+      --sa-color-primary-700: #070f1b;
+      
+      --sa-color-accent-50: #eefdf4;
+      --sa-color-accent-500: #77f9a0; /* Bright mint green */
+      --sa-color-accent-600: #57df81;
+      
+      /* Active font mappings */
+      --sa-font-primary: var(--sa-font-sans);
+      --sa-font-heading: var(--sa-font-heading);
+    }
+  </style>
 </head>
-<body class="sa-bg-gray-100 sa-font-sans">
+<body class="sa-bg-gray-100 sa-font-primary sa-text-primary-600 sa-min-h-screen">
 
   <div class="sa-flex sa-h-screen sa-overflow-hidden">
 
-    <!-- Sidebar -->
-    <aside class="sa-w-64 sa-bg-gray-900 sa-text-white sa-flex sa-flex-col">
-      <div class="sa-p-4 sa-text-2xl sa-font-bold sa-border-b sa-border-gray-800">
-        SA Admin
+    <!-- 1. SIDEBAR NAVIGATION -->
+    <aside class="sa-w-64 sa-bg-neutral-900 sa-text-gray-300 sa-flex sa-flex-col sa-border-r sa-border-neutral-800">
+      <div class="sa-p-6 sa-text-2xl sa-font-black sa-text-white sa-border-b sa-border-neutral-800 sa-flex sa-items-center sa-gap-3">
+        <i class="sa-icon sa-i-brand-google sa-text-primary-500 sa-i-md"></i>
+        <span>SA Portal</span>
       </div>
+      
+      <!-- Nav Links -->
       <nav class="sa-flex-1 sa-p-4 sa-space-y-2">
-        <a href="#" class="sa-block sa-px-4 sa-py-2 sa-bg-gray-800 sa-rounded sa-text-primary-400">Dashboard</a>
-        <a href="#" class="sa-block sa-px-4 sa-py-2 sa-text-gray-300 hover:sa-bg-gray-800 sa-rounded">Users</a>
-        <a href="#" class="sa-block sa-px-4 sa-py-2 sa-text-gray-300 hover:sa-bg-gray-800 sa-rounded">Settings</a>
+        <a href="#" id="nav-dashboard" class="sa-flex sa-items-center sa-gap-3 sa-px-4 sa-py-3 sa-bg-neutral-800 sa-text-white sa-rounded-lg sa-transition">
+          <i class="sa-icon sa-i-home sa-text-primary-500"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" id="nav-users" class="sa-flex sa-items-center sa-gap-3 sa-px-4 sa-py-3 hover:sa-bg-neutral-800 hover:sa-text-white sa-rounded-lg sa-transition">
+          <i class="sa-icon sa-i-person"></i>
+          <span>Users</span>
+        </a>
+        <a href="#" id="nav-settings" class="sa-flex sa-items-center sa-gap-3 sa-px-4 sa-py-3 hover:sa-bg-neutral-800 hover:sa-text-white sa-rounded-lg sa-transition">
+          <i class="sa-icon sa-i-settings"></i>
+          <span>Settings</span>
+        </a>
       </nav>
-      <div class="sa-p-4 sa-border-t sa-border-gray-800">
-        <button class="sa-btn sa-btn-danger sa-w-full">Logout</button>
+      
+      <!-- Logout Button -->
+      <div class="sa-p-4 sa-border-t sa-border-neutral-800">
+        <button id="logout-btn" class="sa-btn sa-btn-danger sa-btn-block sa-flex sa-items-center sa-gap-2">
+          <i class="sa-icon sa-i-exit_to_app"></i> Logout
+        </button>
       </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- 2. MAIN LAYOUT AREA -->
     <main class="sa-flex-1 sa-flex sa-flex-col sa-overflow-y-auto">
 
-      <!-- Header -->
-      <header class="sa-bg-white sa-shadow-sm sa-p-4 sa-flex sa-justify-between sa-items-center">
-        <h1 class="sa-text-xl sa-font-semibold sa-text-gray-800">Overview</h1>
+      <!-- TOP NAVBAR -->
+      <header class="sa-bg-white sa-shadow-sm sa-py-4 sa-px-8 sa-flex sa-justify-between sa-items-center sa-border-b sa-border-gray-200">
+        <h1 id="page-title" class="sa-text-xl sa-font-bold sa-text-gray-800">Overview</h1>
         <div class="sa-flex sa-items-center sa-gap-4">
-          <span class="sa-text-gray-600">admin@example.com</span>
-          <div class="sa-w-10 sa-h-10 sa-bg-primary-500 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-text-white sa-font-bold">A</div>
+          <span class="sa-text-gray-500 sa-text-sm sa-font-medium">admin@shoaibaftab.com</span>
+          <div class="sa-w-10 sa-h-10 sa-bg-primary-600 sa-text-white sa-rounded-full sa-flex sa-items-center sa-justify-center sa-font-bold sa-shadow-md">
+            SA
+          </div>
         </div>
       </header>
 
-      <!-- Content -->
+      <!-- VIEWPORTS -->
       <div class="sa-p-6">
-        <!-- Stats Row -->
-        <div class="sa-grid sa-grid-cols-1 md:sa-grid-cols-3 sa-gap-6 sa-mb-6">
+        
+        <!-- PANEL A: DASHBOARD OVERVIEW -->
+        <div id="panel-dashboard" class="sa-block">
+          
+          <!-- Stats Row -->
+          <div class="sa-grid sa-grid-cols-1 sa-md:grid-cols-3 sa-gap-6 sa-mb-6">
+            
+            <div class="sa-card sa-p-6 sa-bg-white sa-border sa-border-gray-200">
+              <div class="sa-flex sa-justify-between sa-items-center sa-mb-2">
+                <h2 class="sa-text-xs sa-text-gray-500 sa-uppercase sa-font-black">Total Users</h2>
+                <i class="sa-icon sa-i-person sa-text-primary-600"></i>
+              </div>
+              <p class="sa-text-3xl sa-font-bold sa-text-gray-900 sa-mb-1">1,245</p>
+              <span class="sa-text-success-600 sa-text-xs sa-font-bold">+12% from last month</span>
+            </div>
 
-          <div class="sa-card sa-p-6">
-            <h2 class="sa-text-sm sa-text-gray-500 sa-uppercase sa-font-bold sa-mb-2">Total Users</h2>
-            <p class="sa-text-3xl sa-font-bold sa-text-gray-900">1,245</p>
-            <p class="sa-text-success-600 sa-text-sm sa-mt-2">+12% from last month</p>
+            <div class="sa-card sa-p-6 sa-bg-white sa-border sa-border-gray-200">
+              <div class="sa-flex sa-justify-between sa-items-center sa-mb-2">
+                <h2 class="sa-text-xs sa-text-gray-500 sa-uppercase sa-font-black">Revenue</h2>
+                <i class="sa-icon sa-i-credit_card sa-text-primary-600"></i>
+              </div>
+              <p class="sa-text-3xl sa-font-bold sa-text-gray-900 sa-mb-1">$45,231</p>
+              <span class="sa-text-success-600 sa-text-xs sa-font-bold">+4% from last month</span>
+            </div>
+
+            <div class="sa-card sa-p-6 sa-bg-white sa-border sa-border-gray-200">
+              <div class="sa-flex sa-justify-between sa-items-center sa-mb-2">
+                <h2 class="sa-text-xs sa-text-gray-500 sa-uppercase sa-font-black">Active Tasks</h2>
+                <i class="sa-icon sa-i-check sa-text-primary-600"></i>
+              </div>
+              <p class="sa-text-3xl sa-font-bold sa-text-gray-900 sa-mb-1">23</p>
+              <span class="sa-text-danger-600 sa-text-xs sa-font-bold">-2 resolved today</span>
+            </div>
+
           </div>
 
-          <div class="sa-card sa-p-6">
-            <h2 class="sa-text-sm sa-text-gray-500 sa-uppercase sa-font-bold sa-mb-2">Revenue</h2>
-            <p class="sa-text-3xl sa-font-bold sa-text-gray-900">$45,231</p>
-            <p class="sa-text-success-600 sa-text-sm sa-mt-2">+4% from last month</p>
-          </div>
-
-          <div class="sa-card sa-p-6">
-            <h2 class="sa-text-sm sa-text-gray-500 sa-uppercase sa-font-bold sa-mb-2">Active Issues</h2>
-            <p class="sa-text-3xl sa-font-bold sa-text-gray-900">23</p>
-            <p class="sa-text-danger-600 sa-text-sm sa-mt-2">-2 fixed today</p>
+          <!-- Data Table Card -->
+          <div class="sa-card sa-bg-white sa-border sa-border-gray-200">
+            <div class="sa-card-header sa-flex sa-justify-between sa-items-center sa-pb-4 sa-border-b sa-border-gray-100">
+              <h2 class="sa-font-bold sa-text-lg sa-text-gray-800">Recent Transactions</h2>
+              <button id="export-trigger-btn" class="sa-btn sa-btn-primary sa-flex sa-items-center sa-gap-2">
+                <i class="sa-icon sa-i-download sa-text-white"></i> Export Data
+              </button>
+            </div>
+            
+            <div class="sa-card-body sa-p-0 sa-overflow-x-auto">
+              <table class="sa-w-full sa-text-left">
+                <thead>
+                  <tr class="sa-bg-gray-50 sa-border-b sa-border-gray-200 sa-text-gray-600 sa-text-xs sa-font-black sa-uppercase">
+                    <th class="sa-p-4">ID</th>
+                    <th class="sa-p-4">Customer</th>
+                    <th class="sa-p-4">Amount</th>
+                    <th class="sa-p-4">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="sa-text-sm">
+                  <tr class="sa-border-b sa-border-gray-100 hover:sa-bg-gray-50">
+                    <td class="sa-p-4 sa-font-bold">#TR-001</td>
+                    <td class="sa-p-4">John Doe</td>
+                    <td class="sa-p-4">$120.00</td>
+                    <td class="sa-p-4"><span class="sa-badge sa-badge-success">Completed</span></td>
+                  </tr>
+                  <tr class="sa-border-b sa-border-gray-100 hover:sa-bg-gray-50">
+                    <td class="sa-p-4 sa-font-bold">#TR-002</td>
+                    <td class="sa-p-4">Jane Smith</td>
+                    <td class="sa-p-4">$45.50</td>
+                    <td class="sa-p-4"><span class="sa-badge sa-badge-warning">Pending</span></td>
+                  </tr>
+                  <tr class="hover:sa-bg-gray-50">
+                    <td class="sa-p-4 sa-font-bold">#TR-003</td>
+                    <td class="sa-p-4">Bob Johnson</td>
+                    <td class="sa-p-4">$99.99</td>
+                    <td class="sa-p-4"><span class="sa-badge sa-badge-danger">Failed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
         </div>
 
-        <!-- Data Table Card -->
-        <div class="sa-card">
-          <div class="sa-card-header sa-flex sa-justify-between sa-items-center">
-            <h2 class="sa-font-bold sa-text-lg">Recent Transactions</h2>
-            <button class="sa-btn sa-btn-primary">Export CSV</button>
+        <!-- PANEL B: USER MANAGEMENT -->
+        <div id="panel-users" class="sa-hidden">
+          <div class="sa-card sa-p-6 sa-bg-white sa-border sa-border-gray-200">
+            <h2 class="sa-font-bold sa-text-lg sa-mb-4">Users Directory</h2>
+            <p class="sa-text-gray-500 sa-text-sm sa-mb-4">Manage developers and staff memberships.</p>
+            <div class="sa-p-4 sa-bg-gray-50 sa-rounded-lg sa-border sa-border-gray-100 sa-text-center">
+              <i class="sa-icon sa-i-info sa-text-primary-600 sa-i-lg sa-mb-2"></i>
+              <p class="sa-text-xs sa-text-gray-500">Directory contains 1,245 active platform administrators.</p>
+            </div>
           </div>
-          <div class="sa-card-body sa-p-0">
-            <table class="sa-w-full sa-text-left">
-              <thead>
-                <tr class="sa-bg-gray-50 sa-border-b sa-border-gray-200">
-                  <th class="sa-p-4 sa-font-semibold sa-text-gray-600">ID</th>
-                  <th class="sa-p-4 sa-font-semibold sa-text-gray-600">Customer</th>
-                  <th class="sa-p-4 sa-font-semibold sa-text-gray-600">Amount</th>
-                  <th class="sa-p-4 sa-font-semibold sa-text-gray-600">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="sa-border-b sa-border-gray-100">
-                  <td class="sa-p-4">#TR-001</td>
-                  <td class="sa-p-4">John Doe</td>
-                  <td class="sa-p-4">$120.00</td>
-                  <td class="sa-p-4"><span class="sa-badge sa-badge-success">Completed</span></td>
-                </tr>
-                <tr class="sa-border-b sa-border-gray-100">
-                  <td class="sa-p-4">#TR-002</td>
-                  <td class="sa-p-4">Jane Smith</td>
-                  <td class="sa-p-4">$45.50</td>
-                  <td class="sa-p-4"><span class="sa-badge sa-badge-warning">Pending</span></td>
-                </tr>
-                <tr>
-                  <td class="sa-p-4">#TR-003</td>
-                  <td class="sa-p-4">Bob Johnson</td>
-                  <td class="sa-p-4">$99.99</td>
-                  <td class="sa-p-4"><span class="sa-badge sa-badge-danger">Failed</span></td>
-                </tr>
-              </tbody>
-            </table>
+        </div>
+
+        <!-- PANEL C: PLATFORM SETTINGS & CODE PLAYGROUND -->
+        <div id="panel-settings" class="sa-hidden">
+          
+          <div class="sa-card sa-bg-white sa-border sa-border-gray-200 sa-mb-6">
+            <div class="sa-card-header sa-pb-4 sa-border-b sa-border-gray-100">
+              <h2 class="sa-font-bold sa-text-lg">System Preferences</h2>
+            </div>
+            <div class="sa-card-body sa-p-6 sa-space-y-6">
+              
+              <!-- Checkbox Toggle -->
+              <div class="sa-flex sa-items-center sa-justify-between">
+                <div>
+                  <h4 class="sa-font-bold sa-text-sm">Real-time Platform Notifications</h4>
+                  <p class="sa-text-xs sa-text-gray-500">Receive persistent Slack/Web alerts on action triggers.</p>
+                </div>
+                <input type="checkbox" class="sa-toggle" checked>
+              </div>
+
+              <!-- Theme Toggler -->
+              <div class="sa-flex sa-items-center sa-justify-between">
+                <div>
+                  <h4 class="sa-font-bold sa-text-sm">Ecosystem Dark Mode</h4>
+                  <p class="sa-text-xs sa-text-gray-500">Toggle dark-ambient backdrop-filters for night developers.</p>
+                </div>
+                <button id="theme-toggle-btn" class="sa-btn sa-btn-outline sa-btn-sm sa-flex sa-items-center sa-gap-2">
+                  <i class="sa-icon sa-i-star sa-i-sm"></i> Switch Theme
+                </button>
+              </div>
+
+            </div>
           </div>
+
+          <!-- Code Playground Section with Stage 3 copy button -->
+          <div class="sa-card sa-bg-white sa-border sa-border-gray-200">
+            <div class="sa-card-header sa-flex sa-justify-between sa-items-center sa-pb-4 sa-border-b sa-border-gray-100">
+              <h2 class="sa-font-bold sa-text-lg">Developer Playground Integration</h2>
+              <button id="copy-snippet-btn" class="sa-btn sa-btn-outline sa-btn-sm sa-flex sa-items-center sa-gap-2 sa-tooltip" data-tip="Copy snippet">
+                <i id="copy-btn-icon" class="sa-icon sa-i-content_copy sa-i-sm"></i> <span id="copy-btn-text">Copy code</span>
+              </button>
+            </div>
+            
+            <div class="sa-card-body sa-p-6">
+              <p class="sa-text-gray-500 sa-text-sm sa-mb-4">
+                Deploy the complete Shoaib Aftab ecosystem instantly in your enterprise websites by pasting this unified skeleton tag:
+              </p>
+              <pre class="sa-bg-gray-900 sa-text-gray-300 sa-p-4 sa-rounded-lg sa-font-mono sa-text-xs sa-overflow-x-auto"><code id="code-snippet">&lt;!-- Load Shoaib Aftab CSS Framework --&gt;
+&lt;link rel="stylesheet" href="shoaib-aftab.min.css"&gt;
+&lt;!-- Load Shoaib Aftab Icons library --&gt;
+&lt;link rel="stylesheet" href="sa-icons.min.css"&gt;
+&lt;!-- Load Shoaib Aftab JS Framework --&gt;
+&lt;script src="shoaib-aftab.min.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </main>
 
   </div>
+
+  <!-- Export Data Modal (Modal Overlay Controller) -->
+  <div id="export-modal" class="sa-modal">
+    <div class="sa-modal-box">
+      <div class="sa-flex sa-items-center sa-gap-3 sa-mb-4">
+        <div class="sa-badge sa-badge-primary sa-p-3">
+          <i class="sa-icon sa-i-download sa-text-primary-600"></i>
+        </div>
+        <h3 class="sa-text-lg sa-font-bold sa-text-gray-800">Export Transactions</h3>
+      </div>
+      <p class="sa-text-gray-500 sa-text-sm sa-mb-4">
+        Are you sure you want to export all recent customer invoice data in highly formatted CSV structures?
+      </p>
+      <div class="sa-modal-action">
+        <button id="close-export-btn" class="sa-btn sa-btn-secondary">Cancel</button>
+        <button id="confirm-export-btn" class="sa-btn sa-btn-primary">Confirm Export</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include Shoaib Aftab JS -->
+  <script src="../../shoaib-aftab-js/dist/shoaib-aftab.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof SA === 'undefined') {
+        console.error("JS Framework failed to load.");
+        return;
+      }
+
+      // Initialize Theme Manager
+      SA.theme.init();
+
+      // PANEL NAVIGATION CONTROLS
+      var navDashboard = SA.dom.$('#nav-dashboard');
+      var navUsers = SA.dom.$('#nav-users');
+      var navSettings = SA.dom.$('#nav-settings');
+
+      var panelDashboard = SA.dom.$('#panel-dashboard');
+      var panelUsers = SA.dom.$('#panel-users');
+      var panelSettings = SA.dom.$('#panel-settings');
+      
+      var pageTitle = SA.dom.$('#page-title');
+
+      function switchPanel(activeNav, activePanel, title) {
+        // Reset Nav styles
+        [navDashboard, navUsers, navSettings].forEach(function(nav) {
+          SA.dom.removeClass(nav, 'sa-bg-neutral-800');
+          SA.dom.removeClass(nav, 'sa-text-white');
+        });
+        // Reset Panels display
+        [panelDashboard, panelUsers, panelSettings].forEach(function(panel) {
+          SA.dom.addClass(panel, 'sa-hidden');
+        });
+
+        // Set Active
+        SA.dom.addClass(activeNav, 'sa-bg-neutral-800');
+        SA.dom.addClass(activeNav, 'sa-text-white');
+        SA.dom.removeClass(activePanel, 'sa-hidden');
+        pageTitle.textContent = title;
+      }
+
+      SA.events.on(navDashboard, 'click', function() { switchPanel(navDashboard, panelDashboard, 'Overview'); });
+      SA.events.on(navUsers, 'click', function() { switchPanel(navUsers, panelUsers, 'User Directory'); });
+      SA.events.on(navSettings, 'click', function() { switchPanel(navSettings, panelSettings, 'Settings Panel'); });
+
+      // MODAL EVENT CONTROLS
+      var exportTrigger = SA.dom.$('#export-trigger-btn');
+      var closeExport = SA.dom.$('#close-export-btn');
+      var confirmExport = SA.dom.$('#confirm-export-btn');
+
+      SA.events.on(exportTrigger, 'click', function() {
+        SA.modal.open('export-modal');
+      });
+      SA.events.on(closeExport, 'click', function() {
+        SA.modal.close('export-modal');
+      });
+      SA.events.on(confirmExport, 'click', function() {
+        alert("Invoice transactions exported successfully!");
+        SA.modal.close('export-modal');
+      });
+      SA.modal.bindBackdrop('export-modal');
+
+      // LOGOUT CONTROL
+      SA.events.on(SA.dom.$('#logout-btn'), 'click', function() {
+        alert("Logged out successfully from SA Admin Portal.");
+      });
+
+      // THEME TOGGLE CONTROL
+      SA.events.on(SA.dom.$('#theme-toggle-btn'), 'click', function() {
+        var nextTheme = SA.theme.toggle();
+        alert("Ecosystem theme toggled to: " + nextTheme.toUpperCase() + " Mode");
+      });
+
+      // STAGE 3: INTERACTIVE CLIPBOARD CODE BLOCK
+      var copyBtn = SA.dom.$('#copy-snippet-btn');
+      var copyIcon = SA.dom.$('#copy-btn-icon');
+      var copyText = SA.dom.$('#copy-btn-text');
+      var codeSnippet = SA.dom.$('#code-snippet');
+
+      SA.events.on(copyBtn, 'click', function() {
+        var code = codeSnippet.textContent;
+        SA.clipboard.copy(code).then(function() {
+          SA.dom.removeClass(copyIcon, 'sa-i-content_copy');
+          SA.dom.addClass(copyIcon, 'sa-i-check');
+          SA.dom.addClass(copyIcon, 'sa-text-success-500');
+          copyText.textContent = 'Copied!';
+          copyBtn.setAttribute('data-tip', 'Copied successfully!');
+
+          setTimeout(function() {
+            SA.dom.removeClass(copyIcon, 'sa-i-check');
+            SA.dom.removeClass(copyIcon, 'sa-text-success-500');
+            SA.dom.addClass(copyIcon, 'sa-i-content_copy');
+            copyText.textContent = 'Copy code';
+            copyBtn.setAttribute('data-tip', 'Copy snippet');
+          }, 1500);
+        }).catch(function(err) {
+          console.error("Clipboard copy failed:", err);
+        });
+      });
+
+    });
+  </script>
 
 </body>
 </html>

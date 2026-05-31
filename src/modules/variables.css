@@ -1,3 +1,5 @@
+/* Fonts are strictly local or system-based for GDPR/Privacy compliance */
+
 /*
 =============================================================================
   Shoaib Aftab CSS - Variables (CSS Custom Properties)
@@ -63,6 +65,22 @@
   --sa-color-info-600: #0891b2;
   --sa-color-info-700: #0e7490;
 
+  /* Accent (Violet/Indigo) */
+  --sa-color-accent-50: #f5f3ff;
+  --sa-color-accent-100: #ede9fe;
+  --sa-color-accent-500: #8b5cf6;
+  --sa-color-accent-600: #7c3aed;
+  --sa-color-accent-700: #6d28d9;
+
+  /* Neutral (Slate/Dark Base) */
+  --sa-color-neutral-50: #f8fafc;
+  --sa-color-neutral-100: #f1f5f9;
+  --sa-color-neutral-500: #64748b;
+  --sa-color-neutral-600: #475569;
+  --sa-color-neutral-700: #334155;
+  --sa-color-neutral-800: #1e293b;
+  --sa-color-neutral-900: #0f172a;
+
   /* Spacing */
   --sa-spacing-0: 0px;
   --sa-spacing-1: 0.25rem;  /* 4px */
@@ -83,10 +101,30 @@
   --sa-spacing-56: 14rem;   /* 224px */
   --sa-spacing-64: 16rem;   /* 256px */
 
-  /* Typography */
+  /* Typography - Base Defaults */
   --sa-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --sa-font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
   --sa-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Premium English Google Fonts (With absolute browser fallbacks) */
+  --sa-font-inter: 'Inter', var(--sa-font-sans);
+  --sa-font-jakarta: 'Plus Jakarta Sans', var(--sa-font-sans);
+  --sa-font-outfit: 'Outfit', var(--sa-font-sans);
+  --sa-font-montserrat: 'Montserrat', var(--sa-font-sans);
+  --sa-font-playfair: 'Playfair Display', var(--sa-font-serif);
+  --sa-font-lora: 'Lora', var(--sa-font-serif);
+  --sa-font-fira: 'Fira Code', var(--sa-font-mono);
+  --sa-font-jetbrains: 'JetBrains Mono', var(--sa-font-mono);
+  --sa-font-grotesk: 'Space Grotesk', var(--sa-font-sans);
+  --sa-font-bebas: 'Bebas Neue', var(--sa-font-sans);
+  --sa-font-syne: 'Syne', var(--sa-font-sans);
+  --sa-font-cinzel: 'Cinzel', var(--sa-font-serif);
+
+  /* Active Font Assignments (Fully customizable by agency/clients) */
+  --sa-font-primary: var(--sa-font-inter);
+  --sa-font-heading: var(--sa-font-jakarta);
+  --sa-font-display: var(--sa-font-bebas);
+  --sa-font-code: var(--sa-font-jetbrains);
 
   /* Font Sizes */
   --sa-text-xs: 0.75rem;     /* 12px */

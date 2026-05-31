@@ -15,7 +15,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
-  font-family: var(--sa-font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif);
+  font-family: var(--sa-font-primary, var(--sa-font-sans));
 }
 
 body {
@@ -50,7 +50,7 @@ b, strong {
 }
 
 code, kbd, samp, pre {
-  font-family: var(--sa-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+  font-family: var(--sa-font-code, var(--sa-font-mono));
   font-size: 1em;
 }
 

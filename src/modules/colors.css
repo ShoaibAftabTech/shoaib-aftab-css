@@ -55,6 +55,20 @@
 .sa-bg-info-600 { background-color: var(--sa-color-info-600); }
 .sa-bg-info-700 { background-color: var(--sa-color-info-700); }
 
+.sa-bg-accent-50 { background-color: var(--sa-color-accent-50); }
+.sa-bg-accent-100 { background-color: var(--sa-color-accent-100); }
+.sa-bg-accent-500 { background-color: var(--sa-color-accent-500); }
+.sa-bg-accent-600 { background-color: var(--sa-color-accent-600); }
+.sa-bg-accent-700 { background-color: var(--sa-color-accent-700); }
+
+.sa-bg-neutral-50 { background-color: var(--sa-color-neutral-50); }
+.sa-bg-neutral-100 { background-color: var(--sa-color-neutral-100); }
+.sa-bg-neutral-500 { background-color: var(--sa-color-neutral-500); }
+.sa-bg-neutral-600 { background-color: var(--sa-color-neutral-600); }
+.sa-bg-neutral-700 { background-color: var(--sa-color-neutral-700); }
+.sa-bg-neutral-800 { background-color: var(--sa-color-neutral-800); }
+.sa-bg-neutral-900 { background-color: var(--sa-color-neutral-900); }
+
 
 /* Text Colors */
 .sa-text-transparent { color: var(--sa-color-transparent); }
@@ -100,6 +114,16 @@
 .sa-text-info-600 { color: var(--sa-color-info-600); }
 .sa-text-info-700 { color: var(--sa-color-info-700); }
 
+.sa-text-accent-500 { color: var(--sa-color-accent-500); }
+.sa-text-accent-600 { color: var(--sa-color-accent-600); }
+.sa-text-accent-700 { color: var(--sa-color-accent-700); }
+
+.sa-text-neutral-500 { color: var(--sa-color-neutral-500); }
+.sa-text-neutral-600 { color: var(--sa-color-neutral-600); }
+.sa-text-neutral-700 { color: var(--sa-color-neutral-700); }
+.sa-text-neutral-800 { color: var(--sa-color-neutral-800); }
+.sa-text-neutral-900 { color: var(--sa-color-neutral-900); }
+
 /* Border Colors */
 .sa-border-transparent { border-color: var(--sa-color-transparent); }
 .sa-border-current { border-color: var(--sa-color-current); }
@@ -123,3 +147,7 @@
 .sa-border-danger-500 { border-color: var(--sa-color-danger-500); }
 .sa-border-warning-500 { border-color: var(--sa-color-warning-500); }
 .sa-border-info-500 { border-color: var(--sa-color-info-500); }
+
+.sa-border-accent-500 { border-color: var(--sa-color-accent-500); }
+.sa-border-neutral-500 { border-color: var(--sa-color-neutral-500); }
+.sa-border-neutral-800 { border-color: var(--sa-color-neutral-800); }

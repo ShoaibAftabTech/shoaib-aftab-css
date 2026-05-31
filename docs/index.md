@@ -41,6 +41,13 @@ Welcome to the official documentation for **shoaib-aftab-css**—a powerful, lig
 ### Installation
 Include the minified stylesheet inside the `<head>` of your HTML document:
 ```html
+<!-- 1. jsDelivr CDN (NPM Scoped - Recommended) -->
+<!-- Versioned (Stable) -->
+<link href="https://cdn.jsdelivr.net/npm/@shoaibaftabtech/css@2.0.0/dist/shoaib-aftab.min.css" rel="stylesheet">
+<!-- Latest (Auto-updates) -->
+<link href="https://cdn.jsdelivr.net/npm/@shoaibaftabtech/css@latest/dist/shoaib-aftab.min.css" rel="stylesheet">
+
+<!-- 2. jsDelivr CDN (GitHub - Backup) -->
 <link href="https://cdn.jsdelivr.net/gh/ShoaibAftabTech/shoaib-aftab-css@main/dist/shoaib-aftab.min.css" rel="stylesheet">
 ```
 
@@ -89,6 +96,60 @@ Buttons support hover effects, click scaling transitions, and sizes:
 <div class="sa-card sa-hover:shadow-lg sa-transition-all">
   <div class="sa-card-header">Profile Card</div>
   <div class="sa-card-body">Name: Shoaib Aftab</div>
+</div>
+```
+
+### Modals & Dialogs
+```html
+<!-- Trigger with JS (SA.modal.open) or pure CSS target link -->
+<a href="#my-modal" class="sa-btn sa-btn-primary">Open Modal</a>
+
+<div id="my-modal" class="sa-modal">
+  <div class="sa-modal-box">
+    <h3>Modal Title</h3>
+    <p>Modal content details here.</p>
+    <div class="sa-modal-action">
+      <a href="#" class="sa-btn sa-btn-secondary">Close</a>
+    </div>
+  </div>
+</div>
+```
+
+### Dropdowns
+```html
+<div class="sa-dropdown">
+  <button class="sa-btn">Dropdown Trigger</button>
+  <div class="sa-dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+  </div>
+</div>
+```
+
+### Form Controls & Toggles
+```html
+<!-- Checkbox -->
+<input type="checkbox" class="sa-checkbox">
+
+<!-- Radio -->
+<input type="radio" class="sa-radio" name="option">
+
+<!-- Toggle Switch -->
+<input type="checkbox" class="sa-toggle">
+```
+
+### Tooltips
+```html
+<div class="sa-tooltip" data-tip="Action info text">
+  <button class="sa-btn">Hover Me</button>
+</div>
+```
+
+### Glassmorphism & Blur
+Apply backdrop filtering onto translucent panels:
+```html
+<div class="sa-backdrop-blur sa-bg-white\/60 sa-p-6 sa-rounded-lg">
+  <h4>Glassmorphism Panel</h4>
 </div>
 ```
 

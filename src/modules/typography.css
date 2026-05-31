@@ -9,6 +9,26 @@
 .sa-font-serif { font-family: var(--sa-font-serif); }
 .sa-font-mono { font-family: var(--sa-font-mono); }
 
+/* Premium English Google Fonts Classes */
+.sa-font-inter { font-family: var(--sa-font-inter); }
+.sa-font-jakarta { font-family: var(--sa-font-jakarta); }
+.sa-font-outfit { font-family: var(--sa-font-outfit); }
+.sa-font-montserrat { font-family: var(--sa-font-montserrat); }
+.sa-font-playfair { font-family: var(--sa-font-playfair); }
+.sa-font-lora { font-family: var(--sa-font-lora); }
+.sa-font-fira { font-family: var(--sa-font-fira); }
+.sa-font-jetbrains { font-family: var(--sa-font-jetbrains); }
+.sa-font-grotesk { font-family: var(--sa-font-grotesk); }
+.sa-font-bebas { font-family: var(--sa-font-bebas); }
+.sa-font-syne { font-family: var(--sa-font-syne); }
+.sa-font-cinzel { font-family: var(--sa-font-cinzel); }
+
+/* Dynamic Font Role Aliases */
+.sa-font-primary { font-family: var(--sa-font-primary); }
+.sa-font-heading { font-family: var(--sa-font-heading); }
+.sa-font-display { font-family: var(--sa-font-display); }
+.sa-font-code { font-family: var(--sa-font-code); }
+
 /* Font Size */
 .sa-text-xs { font-size: var(--sa-text-xs); line-height: 1rem; }
 .sa-text-sm { font-size: var(--sa-text-sm); line-height: 1.25rem; }
@@ -64,3 +84,21 @@
 .sa-break-words { overflow-wrap: break-word; }
 .sa-break-all { word-break: break-all; }
 .sa-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Text Wrap (Modern) */
+.sa-text-wrap-balance { text-wrap: balance; }
+.sa-text-wrap-pretty { text-wrap: pretty; }
+.sa-text-wrap-none { text-wrap: nowrap; }
+
+/* Line Clamp */
+.sa-line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-4 { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-5 { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-6 { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.sa-line-clamp-none { display: block; -webkit-line-clamp: unset; -webkit-box-orient: horizontal; overflow: visible; }
+
+/* Logical Text Alignment */
+.sa-text-start { text-align: start; }
+.sa-text-end { text-align: end; }

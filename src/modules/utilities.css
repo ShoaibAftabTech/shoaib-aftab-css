@@ -116,3 +116,101 @@
 .sa-hover\:opacity-90:hover { opacity: 0.9 !important; }
 .sa-hover\:opacity-80:hover { opacity: 0.8 !important; }
 .sa-hover\:opacity-50:hover { opacity: 0.5 !important; }
+
+/* 11. Focus Within and Focus Visible */
+.sa-focus-within\:ring-2:focus-within { box-shadow: 0 0 0 3px rgba(0, 210, 133, 0.3) !important; }
+.sa-focus-within\:border-primary:focus-within { border-color: var(--sa-color-primary-500) !important; }
+.sa-focus-visible\:ring-2:focus-visible { box-shadow: 0 0 0 3px rgba(0, 210, 133, 0.3) !important; outline: none !important; }
+
+/* 12. Form States & Validation Variants */
+.sa-invalid\:border-red:invalid { border-color: #ef4444 !important; }
+.sa-invalid\:text-red:invalid { color: #ef4444 !important; }
+.sa-valid\:border-green:valid { border-color: #10b981 !important; }
+.sa-required\:border-blue:required { border-color: #3b82f6 !important; }
+.sa-placeholder-shown\:text-gray:placeholder-shown { color: #9ca3af !important; }
+.sa-user-invalid\:border-red:user-invalid { border-color: #ef4444 !important; } /* Modern Standard */
+.sa-in-range\:bg-green:in-range { background-color: #10b981 !important; }
+.sa-out-of-range\:bg-red:out-of-range { background-color: #ef4444 !important; }
+.sa-autofill\:bg-yellow:-webkit-autofill { background-color: #fef08a !important; }
+
+/* 13. Peer Modifiers (Adjacent Siblings) */
+.sa-peer:checked ~ .sa-peer-checked\:bg-primary { background-color: var(--sa-color-primary-500) !important; }
+.sa-peer:invalid ~ .sa-peer-invalid\:visible { visibility: visible !important; }
+.sa-peer:focus ~ .sa-peer-focus\:text-primary { color: var(--sa-color-primary-500) !important; }
+
+/* 14. Modern :has() Parent Selector Modifiers */
+.sa-has-\[\:checked\]\:bg-green-50:has(:checked) { background-color: #ecfdf5 !important; }
+.sa-has-\[\:invalid\]\:border-red:has(:invalid) { border-color: #ef4444 !important; }
+.sa-has-\[\.active\]\:ring-2:has(.active) { box-shadow: 0 0 0 3px rgba(0, 210, 133, 0.3) !important; }
+
+/* 15. Structural and Child Modifiers */
+.sa-first\:pt-0:first-child { padding-block-start: 0 !important; }
+.sa-last\:pb-0:last-child { padding-block-end: 0 !important; }
+.sa-even\:bg-gray-50:nth-child(even) { background-color: #f9fafb !important; }
+.sa-odd\:bg-white:nth-child(odd) { background-color: #ffffff !important; }
+.sa-empty\:hidden:empty { display: none !important; }
+.sa-first-of-type\:mt-0:first-of-type { margin-block-start: 0 !important; }
+.sa-last-of-type\:mb-0:last-of-type { margin-block-end: 0 !important; }
+
+/* 16. Theme & Contrast Variants (Dark/Light) */
+[data-theme="dark"] .sa-dark\:bg-gray-900 { background-color: #111827 !important; }
+[data-theme="dark"] .sa-dark\:text-white { color: #ffffff !important; }
+[data-theme="dark"] .sa-dark\:border-gray-700 { border-color: #374151 !important; }
+@media (prefers-color-scheme: dark) {
+  .sa-sys-dark\:bg-gray-900 { background-color: #111827 !important; }
+}
+
+/* 17. Advanced Media Queries (Hover & Pointer) */
+@media (hover: hover) {
+  .sa-hover-only\:bg-primary:hover { background-color: var(--sa-color-primary-500) !important; }
+}
+@media (pointer: fine) {
+  .sa-fine-pointer\:p-2 { padding: 0.5rem !important; }
+}
+
+/* 18. Motion & Animation Preferences & Modern Timelines */
+@media (prefers-reduced-motion: reduce) {
+  .sa-motion-reduce\:transition-none { transition: none !important; }
+  .sa-motion-reduce\:animate-none { animation: none !important; }
+  .sa-motion-reduce\:transform-none { transform: none !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sa-motion-safe\:animate-spin { animation: spin 1s linear infinite !important; }
+}
+.sa-animate-timeline-scroll { animation-timeline: scroll(); } /* Scroll-Driven */
+.sa-animate-timeline-view { animation-timeline: view(); }
+
+/* 19. Print Modifiers */
+@media print {
+  .sa-print\:hidden { display: none !important; }
+  .sa-print\:block { display: block !important; }
+  .sa-print\:text-black { color: #000000 !important; }
+  .sa-print\:bg-transparent { background-color: transparent !important; }
+}
+
+/* 20. Container Queries (Modern Component Layouts) */
+.sa-container { container-type: inline-size; }
+@container (min-width: 320px) {
+  .sa-\@sm\:flex-col { flex-direction: column !important; }
+  .sa-\@sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+}
+@container (min-width: 640px) {
+  .sa-\@md\:flex-row { flex-direction: row !important; }
+  .sa-\@md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* 21. Advanced OKLCH / Transparency */
+.sa-bg-primary-500\/50 { background-color: rgb(var(--sa-color-primary-500-rgb) / 0.5) !important; }
+.sa-bg-black\/50 { background-color: rgb(0 0 0 / 0.5) !important; }
+.sa-text-black\/50 { color: rgb(0 0 0 / 0.5) !important; }
+.sa-color-mix-example { background-color: color-mix(in oklch, var(--sa-color-primary-500) 50%, transparent); }
+
+/* 22. View Transitions API */
+.sa-view-transition-card { view-transition-name: sa-card-transition; }
+.sa-view-transition-hero { view-transition-name: sa-hero-transition; }
+
+/* 23. Blend Modes & Backdrop Filters */
+.sa-backdrop-blur { backdrop-filter: blur(8px); }
+.sa-backdrop-brightness-50 { backdrop-filter: brightness(0.5); }
+.sa-mix-blend-multiply { mix-blend-mode: multiply; }
+.sa-bg-blend-overlay { background-blend-mode: overlay; }

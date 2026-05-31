@@ -3,74 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoaib Aftab CSS - Landing Page Example</title>
+  <title>Shoaib Aftab CSS - Enterprise Landing Page</title>
+  <!-- Load our own CSS framework -->
   <link rel="stylesheet" href="../dist/shoaib-aftab.min.css">
-</head>
-<body class="sa-font-sans sa-text-gray-800">
+  <!-- Load our own Icons library -->
+  <link rel="stylesheet" href="../../shoaib-aftab-icons/dist/sa-icons.min.css">
+  <!-- Google Fonts for Shoaib Aftab Tech Theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Brand Identity variables mapping */
+      --sa-font-sans: 'Roboto', sans-serif;
+      --sa-font-heading: 'Poppins', sans-serif;
+      
+      --sa-color-primary-50: #eff6ff;
+      --sa-color-primary-100: #dbeafe;
+      --sa-color-primary-500: #4a90e2; /* Soft secondary blue */
+      --sa-color-primary-600: #0a1628; /* Deep primary navy */
+      --sa-color-primary-700: #070f1b;
+      
+      --sa-color-accent-50: #eefdf4;
+      --sa-color-accent-500: #77f9a0; /* Bright mint green */
+      --sa-color-accent-600: #57df81;
+      
+      /* Active font mappings */
+      --sa-font-primary: var(--sa-font-sans);
+      --sa-font-heading: var(--sa-font-heading);
+    }
 
-  <!-- Navbar -->
-  <nav class="sa-bg-white sa-shadow-sm sa-py-4 sa-px-6 sa-flex sa-justify-between sa-items-center sa-sticky sa-top-0 sa-z-50">
-    <div class="sa-text-2xl sa-font-black sa-text-primary-600">Shoaib Aftab CSS</div>
+    .sa-gradient-accent-hero {
+      background: linear-gradient(135deg, var(--sa-color-accent-500) 0%, var(--sa-color-primary-500) 70%);
+    }
+  </style>
+</head>
+<body class="sa-font-primary sa-text-primary-600 sa-bg-white sa-min-h-screen">
+
+  <!-- 1. PREMIUM HEADER / NAVBAR -->
+  <nav class="sa-bg-white sa-shadow-sm sa-py-4 sa-px-8 sa-flex sa-justify-between sa-items-center sa-sticky sa-top-0 sa-z-50 sa-border-b sa-border-gray-100">
+    <div class="sa-text-2xl sa-font-black sa-text-primary-600 sa-flex sa-items-center sa-gap-2">
+      <i class="sa-icon sa-i-brand-google sa-text-primary-600 sa-i-md"></i>
+      <span>Shoaib Aftab CSS</span>
+    </div>
+    
     <div class="sa-flex sa-gap-6 sa-items-center">
-      <a href="#" class="sa-text-gray-600 sa-hover:text-primary sa-transition">Features</a>
-      <a href="#" class="sa-text-gray-600 sa-hover:text-primary sa-transition">Documentation</a>
-      <a href="#" class="sa-text-gray-600 sa-hover:text-primary sa-transition">Pricing</a>
-      <button class="sa-btn sa-btn-primary sa-hover:bg-primary-hover sa-active:scale-95 sa-transition">Get Started</button>
+      <!-- Interactive Dropdown (Dynamic Event Driven) -->
+      <div id="features-dropdown" class="sa-dropdown">
+        <a href="#" id="dropdown-trigger" class="sa-text-gray-600 sa-hover:text-primary sa-font-semibold sa-flex sa-items-center sa-gap-1">
+          <span>Products</span> <i class="sa-icon sa-i-chevron_right sa-i-sm"></i>
+        </a>
+        <div class="sa-dropdown-content sa-p-2">
+          <a href="#" class="sa-block sa-px-4 sa-py-2 sa-text-sm sa-text-gray-700 hover:sa-bg-gray-100 sa-rounded">CSS Framework</a>
+          <a href="#" class="sa-block sa-px-4 sa-py-2 sa-text-sm sa-text-gray-700 hover:sa-bg-gray-100 sa-rounded">JS Library</a>
+          <a href="#" class="sa-block sa-px-4 sa-py-2 sa-text-sm sa-text-gray-700 hover:sa-bg-gray-100 sa-rounded">Icons Stock</a>
+        </div>
+      </div>
+      
+      <a href="#" class="sa-text-gray-600 sa-hover:text-primary sa-font-semibold">Documentation</a>
+      <a href="#" class="sa-text-gray-600 sa-hover:text-primary sa-font-semibold">Pricing</a>
+      <button id="cta-btn" class="sa-btn sa-btn-primary sa-active:scale-95 sa-transition">Get Started</button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="sa-bg-gray-50 sa-py-20 sa-px-6 sa-text-center">
-    <h1 class="sa-text-6xl sa-font-extrabold sa-text-gray-900 sa-mb-6">Build Faster with Shoaib Aftab CSS</h1>
-    <p class="sa-text-xl sa-text-gray-600 sa-max-w-2xl sa-mx-auto sa-mb-10">
-      A modern, lightweight, and utility-first CSS framework designed for production. Zero dependencies. Full RTL support.
-    </p>
-    <div class="sa-flex sa-justify-center sa-gap-4">
-      <button class="sa-btn sa-btn-primary sa-text-lg sa-px-8 sa-py-3 sa-hover:bg-primary-hover sa-active:scale-95 sa-transition">Download Now</button>
-      <button class="sa-btn sa-btn-secondary sa-text-lg sa-px-8 sa-py-3 sa-hover:shadow-md sa-active:scale-95 sa-transition">Read Docs</button>
+  <!-- 2. HERO HIGHLIGHT -->
+  <section class="sa-gradient-accent-hero sa-py-28 sa-px-6 sa-text-center sa-relative sa-overflow-hidden">
+    <div class="sa-max-w-3xl sa-mx-auto sa-relative sa-z-10">
+      <div class="sa-flex sa-justify-center sa-mb-6">
+        <span class="sa-badge sa-px-4 sa-py-2 sa-rounded-full sa-font-bold sa-flex sa-items-center sa-gap-2 sa-text-primary-600 sa-bg-white sa-border-0">
+          <i class="sa-icon sa-i-star sa-text-primary-600 sa-i-sm"></i> Framework v2.0.0 is Live
+        </span>
+      </div>
+      <h1 class="sa-text-5xl sa-font-heading sa-font-extrabold sa-text-white sa-mb-6 sa-line-height-1">
+        Build Symmetrical Interfaces with Shoaib Aftab CSS
+      </h1>
+      <p class="sa-text-lg sa-text-white sa-opacity-90 sa-mb-10 sa-line-height-6 sa-max-w-2xl sa-mx-auto">
+        A modern, lightweight, and utility-first CSS framework designed strictly on W3C specifications. Zero runtime dependencies. Meticulously optimized for production developer portfolios.
+      </p>
+      <div class="sa-flex sa-justify-center sa-gap-4">
+        <button id="download-trigger-btn" class="sa-btn sa-btn-primary sa-btn-wide sa-text-md sa-py-3 sa-flex sa-items-center sa-gap-2 sa-bg-primary-600 sa-text-accent-500 sa-border-accent-500 hover:sa-bg-accent-500 hover:sa-text-primary-600">
+          <i class="sa-icon sa-i-download sa-text-accent-500"></i> Download Package
+        </button>
+        <button id="docs-trigger-btn" class="sa-btn sa-btn-outline sa-text-white sa-border-white hover:sa-bg-white hover:sa-text-primary-600 sa-text-md sa-py-3">Read Ecosystem Docs</button>
+      </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section class="sa-py-20 sa-px-6 sa-max-w-6xl sa-mx-auto">
+  <!-- 3. PREMIUM GRID FEATURES -->
+  <section class="sa-py-24 sa-px-6 sa-max-w-6xl sa-mx-auto">
     <div class="sa-text-center sa-mb-16">
-      <h2 class="sa-text-3xl sa-font-bold sa-mb-4">Why choose Shoaib Aftab CSS?</h2>
-      <p class="sa-text-gray-600">Everything you need to build stunning interfaces.</p>
+      <h2 class="sa-text-3xl sa-font-bold sa-text-gray-900 sa-mb-4">Why Choose the Unified Ecosystem?</h2>
+      <p class="sa-text-gray-500">A look at the premium architectural highlights of the Shoaib Aftab ecosystem.</p>
     </div>
 
-    <div class="sa-grid sa-grid-cols-1 md:sa-grid-cols-3 sa-gap-8">
+    <!-- Feature Grid -->
+    <div class="sa-grid sa-grid-cols-1 sa-md:grid-cols-3 sa-gap-8 sa-mb-16">
 
-      <div class="sa-card sa-p-6 sa-text-center">
-        <div class="sa-w-16 sa-h-16 sa-bg-primary-100 sa-text-primary-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-4">
-          <svg class="sa-w-8 sa-h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      <!-- Feature 1: Lightweight -->
+      <div class="sa-card sa-p-8 sa-text-center sa-bg-white sa-border sa-border-gray-200">
+        <div class="sa-w-16 sa-h-16 sa-bg-primary-50 sa-text-primary-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-6 sa-shadow-sm">
+          <i class="sa-icon sa-i-star sa-text-primary-600 sa-i-lg"></i>
         </div>
-        <h3 class="sa-text-xl sa-font-bold sa-mb-2">Lightweight</h3>
-        <p class="sa-text-gray-600">Under 30KB minified. Your website will load blazingly fast without any heavy JavaScript dependencies.</p>
+        <h3 class="sa-text-lg sa-font-bold sa-mb-2 sa-text-gray-800">Ultra-Lightweight</h3>
+        <p class="sa-text-gray-500 sa-text-sm sa-line-height-5">
+          Under 30KB minified. Your website loads blazingly fast with zero bloat and 100% self-contained pure W3C styling.
+        </p>
       </div>
 
-      <div class="sa-card sa-p-6 sa-text-center">
-        <div class="sa-w-16 sa-h-16 sa-bg-success-100 sa-text-success-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-4">
-          <svg class="sa-w-8 sa-h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+      <!-- Feature 2: Multilingual RTL -->
+      <div class="sa-card sa-p-8 sa-text-center sa-bg-white sa-border sa-border-gray-200">
+        <div class="sa-w-16 sa-h-16 sa-bg-success-50 sa-text-success-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-6 sa-shadow-sm">
+          <i class="sa-icon sa-i-star sa-text-success-600 sa-i-lg"></i>
         </div>
-        <h3 class="sa-text-xl sa-font-bold sa-mb-2">Full RTL Support</h3>
-        <p class="sa-text-gray-600">Native support for Urdu, Arabic, and Persian. Build multilingual websites effortlessly.</p>
+        <h3 class="sa-text-lg sa-font-bold sa-mb-2 sa-text-gray-800">Native RTL Support</h3>
+        <p class="sa-text-gray-500 sa-text-sm sa-line-height-5">
+          Full RTL auto-mirroring. Symmetrical layouts built natively for Urdu, Arabic, and Persian digital platforms.
+        </p>
       </div>
 
-      <div class="sa-card sa-p-6 sa-text-center">
-        <div class="sa-w-16 sa-h-16 sa-bg-warning-100 sa-text-warning-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-4">
-          <svg class="sa-w-8 sa-h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <!-- Feature 3: Symmetrical Icons -->
+      <div class="sa-card sa-p-8 sa-text-center sa-bg-white sa-border sa-border-gray-200">
+        <div class="sa-w-16 sa-h-16 sa-bg-warning-50 sa-text-warning-600 sa-rounded-full sa-flex sa-items-center sa-justify-center sa-mx-auto sa-mb-6 sa-shadow-sm">
+          <i class="sa-icon sa-i-star sa-text-warning-600 sa-i-lg"></i>
         </div>
-        <h3 class="sa-text-xl sa-font-bold sa-mb-2">Utility First</h3>
-        <p class="sa-text-gray-600">Over 800 utility classes giving you the power to build custom designs without writing a single line of custom CSS.</p>
+        <h3 class="sa-text-lg sa-font-bold sa-mb-2 sa-text-gray-800">75,000+ Symmetrical Icons</h3>
+        <p class="sa-text-gray-500 sa-text-sm sa-line-height-5">
+          Identical concept naming systems mapped seamlessly across Outlined, Rounded, and Sharp families in all weights.
+        </p>
       </div>
 
     </div>
+
+    <!-- 4. DEVELOPER UTILITY CODE BLOCK (Stage 3 copy integration) -->
+    <div class="sa-card sa-bg-neutral-900 sa-text-white sa-p-8 sa-border sa-border-neutral-800">
+      <div class="sa-flex sa-flex-col sa-md:flex-row sa-items-start sa-md:sa-items-center sa-justify-between sa-gap-6 sa-mb-6">
+        <div>
+          <h3 class="sa-text-xl sa-font-bold sa-text-white">Developer Integration Playground</h3>
+          <p class="sa-text-gray-400 sa-text-xs sa-mt-1">Deploy the full ecosystem in under 10 seconds.</p>
+        </div>
+        <!-- Copy Action Button -->
+        <button id="copy-landing-btn" class="sa-btn sa-btn-outline sa-btn-sm sa-flex sa-items-center sa-gap-2 sa-tooltip sa-text-white" data-tip="Copy block">
+          <i id="copy-btn-icon" class="sa-icon sa-i-content_copy sa-i-sm"></i> <span id="copy-btn-text">Copy code</span>
+        </button>
+      </div>
+      <pre class="sa-bg-neutral-800 sa-text-gray-300 sa-p-4 sa-rounded-lg sa-font-mono sa-text-xs sa-overflow-x-auto"><code id="code-snippet">&lt;!-- Shoaib Aftab Unified Ecosystem Integration --&gt;
+&lt;link rel="stylesheet" href="shoaib-aftab.min.css"&gt;
+&lt;link rel="stylesheet" href="sa-icons.min.css"&gt;
+&lt;script src="shoaib-aftab.min.js"&gt;&lt;/script&gt;</code></pre>
+    </div>
+
   </section>
 
-  <!-- Footer -->
-  <footer class="sa-bg-gray-900 sa-text-gray-400 sa-py-10 sa-text-center">
-    <p>&copy; 2024 Shoaib Aftab Tech. Licensed under MIT.</p>
+  <!-- 5. FOOTER -->
+  <footer class="sa-bg-neutral-900 sa-text-gray-400 sa-py-12 sa-text-center sa-border-t sa-border-neutral-800">
+    <p class="sa-text-xs">&copy; 2026 Shoaib Aftab Tech. Symmetrical Production Standard. Licensed under MIT.</p>
   </footer>
 
+  <!-- Include Shoaib Aftab JS -->
+  <script src="../../shoaib-aftab-js/dist/shoaib-aftab.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof SA === 'undefined') {
+        console.error("Ecosystem JS not found.");
+        return;
+      }
+
+      // Initialize Theme Manager
+      SA.theme.init();
+
+      // Navbar CTA Trigger
+      SA.events.on(SA.dom.$('#cta-btn'), 'click', function() {
+        alert("Ecosystem playground activated! Start building premium UIs.");
+      });
+
+      // Hero buttons trigger
+      SA.events.on(SA.dom.$('#download-trigger-btn'), 'click', function() {
+        alert("Shoaib Aftab CSS Framework v2.0.0 package download started!");
+      });
+      SA.events.on(SA.dom.$('#docs-trigger-btn'), 'click', function() {
+        alert("Ecosystem docs dashboard loading...");
+      });
+
+      // Dropdown Bindings
+      SA.dropdown.bindClickOutside('features-dropdown');
+      SA.events.on(SA.dom.$('#dropdown-trigger'), 'click', function(e) {
+        e.preventDefault();
+        SA.dropdown.toggle('features-dropdown');
+      });
+
+      // STAGE 3: INTERACTIVE CLIPBOARD CODE BLOCK
+      var copyBtn = SA.dom.$('#copy-landing-btn');
+      var copyIcon = SA.dom.$('#copy-btn-icon');
+      var copyText = SA.dom.$('#copy-btn-text');
+      var codeSnippet = SA.dom.$('#code-snippet');
+
+      SA.events.on(copyBtn, 'click', function() {
+        var code = codeSnippet.textContent;
+        SA.clipboard.copy(code).then(function() {
+          SA.dom.removeClass(copyIcon, 'sa-i-content_copy');
+          SA.dom.addClass(copyIcon, 'sa-i-check');
+          SA.dom.addClass(copyIcon, 'sa-text-success-500');
+          copyText.textContent = 'Copied!';
+          copyBtn.setAttribute('data-tip', 'Copied successfully!');
+
+          setTimeout(function() {
+            SA.dom.removeClass(copyIcon, 'sa-i-check');
+            SA.dom.removeClass(copyIcon, 'sa-text-success-500');
+            SA.dom.addClass(copyIcon, 'sa-i-content_copy');
+            copyText.textContent = 'Copy code';
+            copyBtn.setAttribute('data-tip', 'Copy block');
+          }, 1500);
+        }).catch(function(err) {
+          console.error("Copy failed:", err);
+        });
+      });
+
+    });
+  </script>
 </body>
 </html>
