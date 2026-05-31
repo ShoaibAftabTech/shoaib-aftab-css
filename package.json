@@ -1,6 +1,6 @@
 {
   "name": "@shoaibaftabtech/css",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An ultra-lightweight, 0-dependency, globally compatible CSS framework for modern enterprise web applications. Features 100% GDPR compliance, CSS Level 4/5 integration, Native Font Fallbacks, OKLCH Colors, Grid Subgrid, Container Queries, and zero external CDNs.",
   "main": "dist/shoaib-aftab.min.css",
   "style": "dist/shoaib-aftab.min.css",
