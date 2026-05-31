@@ -7,8 +7,8 @@
   <p><strong>The Ultimate, 0-Dependency, GDPR-Compliant, Enterprise CSS Framework</strong></p>
   
   <p>
-    [![Version](https://img.shields.io/npm/v/@shoaibaftabtech/css)](https://www.npmjs.com/package/@shoaibaftabtech/css)
-    [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
+    <a href="https://www.npmjs.com/package/@shoaibaftabtech/css"><img src="https://img.shields.io/npm/v/@shoaibaftabtech/css" alt="Version"></a>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-success.svg" alt="License: MIT"></a>
     <a href="#"><img src="https://img.shields.io/badge/dependencies-0-success?style=flat-square" alt="Dependencies"></a>
     <a href="#"><img src="https://img.shields.io/badge/GDPR-Compliant-success?style=flat-square" alt="GDPR"></a>
   </p>
